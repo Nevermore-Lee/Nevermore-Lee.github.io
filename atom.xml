@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Nevermore-Lee/"/>
-  <updated>2016-04-06T16:57:09.633Z</updated>
+  <updated>2016-04-06T18:18:35.295Z</updated>
   <id>https://github.com/Nevermore-Lee/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>标签测试文章</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/07/%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/07/标签测试文章/</id>
+    <published>2016-04-06T18:15:13.000Z</published>
+    <updated>2016-04-06T18:18:35.295Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Testing" scheme="https://github.com/Nevermore-Lee/tags/Testing/"/>
+    
+      <category term="Another Tag" scheme="https://github.com/Nevermore-Lee/tags/Another-Tag/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
