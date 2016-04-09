@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Nevermore-Lee/"/>
-  <updated>2016-04-09T15:54:24.312Z</updated>
+  <updated>2016-04-09T15:58:33.257Z</updated>
   <id>https://github.com/Nevermore-Lee/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="https://github.com/Nevermore-Lee/2016/04/09/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%BF%99%E6%A0%B7/"/>
     <id>https://github.com/Nevermore-Lee/2016/04/09/我们为什么会这样/</id>
     <published>2016-04-09T14:32:59.000Z</published>
-    <updated>2016-04-09T15:54:24.312Z</updated>
+    <updated>2016-04-09T15:58:33.257Z</updated>
     
-    <content type="html">&lt;p&gt;#最近的事#&lt;/p&gt;
-&lt;p&gt;我喜欢上海的夏天，因为上海的天气对我来说，除了冬天就只有夏天来啦！暖暖的风吹在脸上，特别舒服，像极了小时候妈妈的收摩挲在脸上的感觉。&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;最近的事&quot;&gt;&lt;a href=&quot;#最近的事&quot; class=&quot;headerlink&quot; title=&quot;最近的事&quot;&gt;&lt;/a&gt;最近的事&lt;/h1&gt;&lt;p&gt;我喜欢上海的夏天，因为上海的天气对我来说，除了冬天就只有夏天来啦！暖暖的风吹在脸上，特别舒服，像极了小时候妈妈的收摩挲在脸上的感觉。&lt;/p&gt;
 &lt;p&gt;这么好的天气当然要做点有意义的事情啦，去年七月，从学校毕业到现在，发生了很多事情，虽然也没啥大事情，但是我觉的学校外的生活相对来说还是更容易引起人对于自身的思考，至少对于我来说是这样。从工作到生活，总有一些事情会引发我对于自身的思考，简简单单的挤公交这么小的事情，也要思考那么一小会儿，我是不是太闲了啊?hahah&lt;/p&gt;
 &lt;p&gt;我小学的时候喜欢的姑娘现在就躺在我旁边看古代埃及文明，我觉的这是我干的最漂亮的一件事情。我们从大四开始谈的恋爱，很遗憾我们错过了大部分可以好好谈恋爱的时间，幸运的是我没有错过她，毕竟小李还是机智！然而我们也会像一般情侣那样，因为一些小事情相互“伤害”。虽然是一些小事情，但是对于现在相对来说比较敏感的我，对于这些事情，思考的可能有些过于深入了。我感觉这是坏事情，然而却控制不下来去思考。&lt;/p&gt;
 &lt;p&gt;最令人“难过”的莫过于girlfriend跟你讲：你以前不是这样的！我觉的我没变啊，难道她骗我的，我是脑子坏掉了才会觉得她骗我的。她说的一些话，我都会想很多，因为我思考问题的方式是:即使是你在跟我开玩笑，然而你的出发点让我觉得你已经对我的某些行为感到不舒服了，你在暗示我一些事情，怎么感觉这是一种病啊。事出必有因，可是有时候真不是这样，她（他）只是说说而已，真的只是说说，干嘛那么较真，就像翔宝宝跟咩咩都会说我打dota有多菜，然而他们心里觉得浩哥这个技能施放的很到位，这个操作没谁了，他们实际上是这么想的，但是宝宝跟咩咩不说，非要说我菜，这跟小施平常说这个没放好，那个做的不对一样，她只是说一说。好吧，我逗比了！&lt;/p&gt;
@@ -41,9 +40,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;#最近的事#&lt;/p&gt;
-&lt;p&gt;我喜欢上海的夏天，因为上海的天气对我来说，除了冬天就只有夏天来啦！暖暖的风吹在脸上，特别舒服，像极了小时候妈妈的收摩挲在脸上的感觉。&lt;/p&gt;
-&lt;p&gt;这么好的天气当然要做点有意义的事情啦，去年七月，从学校毕业到现在，发生了很多事情，虽然也没啥大事情
+      &lt;h1 id=&quot;最近的事&quot;&gt;&lt;a href=&quot;#最近的事&quot; class=&quot;headerlink&quot; title=&quot;最近的事&quot;&gt;&lt;/a&gt;最近的事&lt;/h1&gt;&lt;p&gt;我喜欢上海的夏天，因为上海的天气对我来说，除了冬天就只有夏天来啦！暖暖的风吹在脸上，特别舒服，像极了小时候妈妈的收摩挲在脸上
     
     </summary>
     
@@ -71,33 +68,6 @@
     
     
       <category term="-Hexo -Next -Blog" scheme="https://github.com/Nevermore-Lee/tags/Hexo-Next-Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://github.com/Nevermore-Lee/2016/04/07/hello-world/"/>
-    <id>https://github.com/Nevermore-Lee/2016/04/07/hello-world/</id>
-    <published>2016-04-06T16:57:09.633Z</published>
-    <updated>2016-04-06T16:57:09.633Z</updated>
-    
-    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
     
   </entry>
   
