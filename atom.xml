@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Nevermore-Lee/"/>
-  <updated>2016-04-09T16:16:19.424Z</updated>
+  <updated>2016-04-12T14:59:08.631Z</updated>
   <id>https://github.com/Nevermore-Lee/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面向对象</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/12/面向对象/</id>
+    <published>2016-04-12T14:55:27.000Z</published>
+    <updated>2016-04-12T14:59:08.631Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;面向对象的编程思想&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;面向对象的编程思想的终极目标是消除重复代码&lt;/li&gt;
+&lt;li&gt;面向对象是一种先考虑让哪个对象去做，在考虑具体怎么做&lt;/li&gt;
+&lt;li&gt;面向对象从抽象到具体&lt;br&gt;4，面向对象是&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;面向对象的编程思想&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;面向对象的编程思想的终极目标是消除重复代码&lt;/li&gt;
+&lt;li&gt;面向对
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>我们为什么会这样</title>
