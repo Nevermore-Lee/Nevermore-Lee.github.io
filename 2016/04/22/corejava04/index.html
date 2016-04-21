@@ -1,0 +1,1271 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="-课堂笔记," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Nevermore'Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="API
+Application Programming Interface应用编程接口
+
+一切可以调用的东西
+
+
+java.lang 包
+lang -  language
+java 语言包
+自动导入
+  String  System
+
+
+java.lang.Objectjava.lang.Stringjava.lang.StringBuilderjava.lang.StringBuffer正则表达">
+<meta property="og:type" content="article">
+<meta property="og:title" content="corejava04">
+<meta property="og:url" content="https://github.com/Nevermore-Lee/2016/04/22/corejava04/index.html">
+<meta property="og:site_name" content="Nevermore'Blog">
+<meta property="og:description" content="API
+Application Programming Interface应用编程接口
+
+一切可以调用的东西
+
+
+java.lang 包
+lang -  language
+java 语言包
+自动导入
+  String  System
+
+
+java.lang.Objectjava.lang.Stringjava.lang.StringBuilderjava.lang.StringBuffer正则表达">
+<meta property="og:updated_time" content="2016-04-21T16:16:19.445Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="corejava04">
+<meta name="twitter:description" content="API
+Application Programming Interface应用编程接口
+
+一切可以调用的东西
+
+
+java.lang 包
+lang -  language
+java 语言包
+自动导入
+  String  System
+
+
+java.lang.Objectjava.lang.Stringjava.lang.StringBuilderjava.lang.StringBuffer正则表达">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> corejava04 | Nevermore'Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Nevermore'Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Your Soul Is Mine!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                corejava04
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-22T00:10:26+08:00" content="2016-04-22">
+              2016-04-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/22/corejava04/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/22/corejava04/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/22/corejava04/" class="leancloud_visitors" data-flag-title="corejava04">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><ul>
+<li><p>Application Programming Interface<br>应用编程接口</p>
+</li>
+<li><p>一切可以调用的东西</p>
+</li>
+</ul>
+<h1 id="java-lang-包"><a href="#java-lang-包" class="headerlink" title="java.lang 包"></a>java.lang 包</h1><ul>
+<li>lang -  language</li>
+<li>java 语言包</li>
+<li><p>自动导入</p>
+<p>  String<br>  System</p>
+</li>
+</ul>
+<h1 id="java-lang-Object"><a href="#java-lang-Object" class="headerlink" title="java.lang.Object"></a>java.lang.Object</h1><p>java.lang.String<br>java.lang.StringBuilder<br>java.lang.StringBuffer<br>正则表达式<br>java.util.regex.Pattern</p>
+<h1 id="java-util-regex-Matcher"><a href="#java-util-regex-Matcher" class="headerlink" title="java.util.regex.Matcher"></a>java.util.regex.Matcher</h1><p>基本类型包装类<br>java.lang.Number<br>java.math.BigDecimal<br>java.math.BigInteger<br>java.text.DecimalFormat</p>
+<h1 id="java-lang-Math"><a href="#java-lang-Math" class="headerlink" title="java.lang.Math"></a>java.lang.Math</h1><p>java.util.Date<br>java.text.SimpleDateFormat<br>java.util.Calendar</p>
+<h1 id="java-util-GregorianCalendar"><a href="#java-util-GregorianCalendar" class="headerlink" title="java.util.GregorianCalendar"></a>java.util.GregorianCalendar</h1><h1 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h1><ul>
+<li>java 所有类的顶层父类</li>
+<li><p>如果不继承其他类，默认继承 Object</p>
+<p>  class A /<em>extends Object</em>/ {</p>
+<p>  }</p>
+<p>方法</p>
+</li>
+</ul>
+<hr>
+<pre><code>toString()
+
+  获得对象的字符串表示
+  Object默认实现是：
+
+    &quot;tarena.day1301.Point@9a4bf81&quot;
+    类名@内存地址
+
+  如果需要，可以在子类中重写这个方法
+
+equals(Object obj)
+
+  当前对象与参数对象 obj 比较是否相等
+  Object 中默认实现是：
+
+      比较内存地址
+      this == obj
+
+  如果需要，可以重写这个方法
+
+hashCode()
+  获得对象的哈希值
+  Object中默认实现是： 
+
+    用对象的内存地址作为哈希值
+
+  如果需要，在子类中重写 hashCode()
+  使用属性计算产生哈希值 
+</code></pre><h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><ul>
+<li><p>封装 char[] 数组的对象</p>
+</li>
+<li><p>字符串的字面值 “abc”</p>
+<p>  *)第一次用到一个字面值时，</p>
+<pre><code>在“字符串常量池”中新分配内存
+</code></pre><p>  *)再次用到相同的字面值时，</p>
+<pre><code>直接访问“常量池”中已经存在的对象
+</code></pre></li>
+<li><p>字符串不可变</p>
+<p>  *)字符串加号连接效率低，</p>
+<pre><code>每次连接都会新建字符串对象
+</code></pre><p>  String s1 = “abc”;<br>  String s2 = “def”;<br>  String s3 = “ghi”;<br>  String s4 = s1 + s2 + s3;</p>
+</li>
+</ul>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="  创建对象"></a>  创建对象</h2><pre><code>1.char[] a = {&apos;h&apos;,&apos;e&apos;,&apos;l&apos;,&apos;l&apos;,&apos;o&apos;};
+  String s = new String(a);
+
+2.第一种方式的语法简化
+  String s = &quot;hello&quot;;
+</code></pre><h2 id="方法"><a href="#方法" class="headerlink" title="  方法"></a>  方法</h2><pre><code>charAt(int index) 
+
+    s = &quot;abc&quot;;        
+    char c = s.charAt(0);
+
+    toUpperCase() 
+
+    s = s.toUpperCase()
+    print(s)
+
+    toLowerCase()
+    length()
+
+    compareTo(String anotherString) 
+    compareToIgnoreCase(String str) 忽略大小写
+            与另一字符串按编码表顺序比较大小
+
+            当前字符串大，返回正数
+            当前字符串小，返回负数
+            大小相同，返回0
+
+    startsWith(String s)    
+
+        s = &quot;http://........&quot;
+        boolean b = s.startsWith(&quot;http://&quot;)
+
+    endsWith(String suffix) 
+            是否以指定的子串开头或结尾
+    equals(Object anObject) 
+    equalsIgnoreCase(String anotherString) 忽略大小写
+            比较字符串内容是否相同
+    indexOf(String s) 
+
+        s = &quot;abc abc abc&quot;;
+        int index = s.lastIndexOf(&quot;xxxx&quot;);
+
+    indexOf(String s, int fromIndex) 从指定位置向后寻找
+            获得指定子串的位置，不存在，返回 -1
+    lastIndexOf(String s) 
+            从后向前寻找子串的位置
+    replace(char oldChar, char newChar) 
+            将指定的字符替换为新的字符
+
+
+            s = &quot;abc abc abc&quot;;
+            String s2 = s.replace(&apos;a&apos;, &apos;-&apos;);
+            System.out.println(s2);
+
+    substring(int a) 从 a 位置直到结束
+
+        s = &quot;abcdefg&quot;;
+        Strring s2 = s.substring(3, 5);
+        System.out.println(s2);
+
+    substring(int a, int b) 
+            获得 [a, b) 位置范围的子串
+    trim() 
+            去除两端空白字符
+
+            s = &quot;   a  bc   &quot;;
+            s = s.trim();
+            System.out.println(s);
+
+    getBytes()                    将 unicode 转为默认编码格式的字节数组
+    getBytes(字符编码)    将 unicode 转为指定编码格式的字节数组
+    String.valueOf(数据)
+            将任何数据转为字符串
+
+  正则表达式相关方法
+  ----------------------------------
+      matches(正则表达式)
+
+          判断当前字符串，能否与正则表达式匹配
+
+      replaceAll(正则表达式, 子串)
+
+          将找到的匹配子串，替换为新的子串
+
+      split(正则表达式)
+
+          用匹配的子串，拆分字符串
+          abc,def,ghi,jkl
+</code></pre><p>StringBuilder</p>
+<h1 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h1><ul>
+<li>可变的字符序列</li>
+<li>封装 char[] 数组</li>
+<li><p>经常用来代替 String 做高效率字符串连接</p>
+<p>  sb.append(“abc”)</p>
+</li>
+<li><p>StringBuilder   线程不安全,效率高<br>StringBuffer    线程安全</p>
+</li>
+</ul>
+<h2 id="创建对象-1"><a href="#创建对象-1" class="headerlink" title="  创建对象"></a>  创建对象</h2><pre><code>1.StringBuilder sb = new StringBuilder();
+
+    空串
+
+2.StringBuilder sb = new StringBuilder(&quot;abc&quot;);
+
+    abc
+</code></pre><h2 id="方法-1"><a href="#方法-1" class="headerlink" title="  方法"></a>  方法</h2><pre><code>append()
+            在字符序列末尾，追加字符
+            高效的字符串连接
+    delete(int start, int end) 
+            删除 [start, end) 
+    deleteCharAt(int index) 
+            删除单个字符
+    insert(int index, 子串)
+            在 index 位置，插入一个子串
+    replace(int start, int end, String str) 
+            将 [start, end) 替换为指定字符串 str
+    reverse() 
+            翻转
+    setCharAt(int index, char ch) 
+            将 index 位置替换为字符 ch
+    toString()
+            转为 String 类型
+</code></pre><h1 id="正则表达式-Regex"><a href="#正则表达式-Regex" class="headerlink" title="正则表达式 Regex"></a>正则表达式 Regex</h1><ul>
+<li>正确的字符串格式规则</li>
+<li><p>百度“正则表达式大全”</p>
+<p>正则表达式        匹配的字符串</p>
+</li>
+</ul>
+<hr>
+<p>  k                 k<br>  abc               abc<br>  [abc]             a, b, c<br>  [a-z]             a, z, e, u<br>  [a-zA-Z<em>0-9]      a, A, z, Z, 0, 9, </em><br>  [^a-zA-Z]         9, _, $, 中<br>  \d                数字<br>  \D                排除数字<br>  \w                单词字符[a-zA-Z_0-9]<br>  \W                排除单词字符[^a-zA-Z_0-9]<br>  \s                空白字符<br>  \S                排除空白字符<br>  .                 任意字符<br>  [\u4e00-\u9fa5]   中文范围</p>
+<p>  [abc]?            0或1个  a,,b,c<br>  [abc]?[123]       a1,a2,a3,b1,b2,3,1,2,c3</p>
+<p>  [abc]*            0到多个  a,,aaa,bbb,abc,cba,abcabcabcabcacbccabccac<br>  [abc]+            1到多个<br>  [abc]{3}          3个, aaa,abc,cba,bbc,cca,cba<br>  [abc]{3,5}        3到5个, abc,abca,abcab<br>  [abc]{3,}         3到多个, abc,abca,abcabcabcabcabcabcacbc</p>
+<p>  |                 或</p>
+<p>java.util.regex.Pattern</p>
+<h1 id="java-util-regex-Matcher-1"><a href="#java-util-regex-Matcher-1" class="headerlink" title="java.util.regex.Matcher"></a>java.util.regex.Matcher</h1><ul>
+<li>Pattern 封装正则表达式</li>
+<li><p>Matcher 封装正则表达式和要匹配的字符串</p>
+<p>创建对象</p>
+</li>
+</ul>
+<hr>
+<pre><code>Pattern p = Pattern.compile(正则表达式);
+Matcher m = p.matcher(要匹配的字符串);
+</code></pre><h2 id="Matcher-方法"><a href="#Matcher-方法" class="headerlink" title="  Matcher 方法"></a>  Matcher 方法</h2><pre><code>find()
+  向后查找下一段匹配的子串
+  返回 boolean 值，表示是否找到下一段
+
+find(int from)
+  从指定位置向后找
+
+group()
+  获取刚刚找到的子串
+
+start()
+end()
+  获取刚刚找到的子串的起始和结束位置
+</code></pre><h1 id="基本类型包装类"><a href="#基本类型包装类" class="headerlink" title="基本类型包装类"></a>基本类型包装类</h1><p>  byte      Byte<br>  short     Short<br>  int       Integer<br>  long      Long<br>  float     Float<br>  double    Double<br>  char      Character<br>  boolean   Boolean</p>
+<h2 id="java-lang-Number"><a href="#java-lang-Number" class="headerlink" title="  java.lang.Number"></a>  java.lang.Number</h2><pre><code>*)数字包装类的抽象父类
+*)子类：
+    Byte
+    Short
+    Integer
+    Long
+    Float
+    Double
+
+    BigDecimal
+    BigInteger
+
+方法
+-----------------------------
+  取值方法
+  byteValue()
+  shortValue()
+  intValue()
+  longValue()
+  floatValue()
+  doubleValue()
+</code></pre><h2 id="Integer"><a href="#Integer" class="headerlink" title="  Integer"></a>  Integer</h2><pre><code>创建对象
+-----------------------------
+  1.Integer i = new Integer(23);
+
+  2.Integer i = Integer.valueOf(23);
+
+      Integer类中存在封装-128到127
+      的缓存对象，
+      范围内的值，直接访问存在的缓存对象，
+      范围外的值，是新建对象
+
+方法
+-----------------------------
+  *)从父类继承的6个取值方法
+  *)字符串解析成数字
+
+      Integer.parseInt(&quot;255&quot;)             255
+      Integer.parseInt(&quot;11111111&quot;,2)      255
+      Integer.parseInt(&quot;377&quot;,8)           255
+      Integer.parseInt(&quot;ff&quot;,16)           255
+
+  *)进制转换
+
+      Integer.toBinaryString(255)         &quot;11111111&quot;
+      Integer.toOctalString(255)          &quot;377&quot;
+      Integer.toHexString(255)            &quot;ff&quot;
+</code></pre><h2 id="Double"><a href="#Double" class="headerlink" title="  Double"></a>  Double</h2><pre><code>创建对象
+--------------------------------------
+  1.Double d = new Double(3.14);
+
+  2.Double d = Double.valueOf(3.14);
+
+      与 new 相同
+
+方法
+--------------------------------------
+  *)从父类继承的6个取值方法
+  *)字符串解析成数字
+
+      Double.parseDouble(&quot;3.14&quot;)
+
+          Short.parseShort()
+          Long.parseLong()
+          Float.parseFloat()
+          Boolean.parseBoolean()
+          ...
+
+  *)对特殊值进行检查
+
+      Infinity      3.14/0
+      NaN           Math.sqrt(-2)
+
+
+      Double.isInfinite(double d)
+      Double.isNaN(double d)
+</code></pre><h2 id="自动装箱、自动拆箱"><a href="#自动装箱、自动拆箱" class="headerlink" title="  自动装箱、自动拆箱"></a>  自动装箱、自动拆箱</h2><pre><code>自动装箱
+---------------------------
+  Integer a = 23;
+  编译成：Integer a = Integer.valueOf(23);
+
+自动拆箱
+---------------------------
+  int i = a;
+  编译成：int i = a.intValue();
+
+  a = a + 1;
+  编译成：a = Integer.valueOf(a.intValue() + 1);
+
+  *)自动拆箱要当心 null 值
+</code></pre><p>java.math.BigDecimal</p>
+<h1 id="java-math-BigInteger"><a href="#java-math-BigInteger" class="headerlink" title="java.math.BigInteger"></a>java.math.BigInteger</h1><ul>
+<li>BigDecimal 精确浮点数运算</li>
+<li><p>BigInteger 大整数运算，可以超出 long 范围</p>
+<p>创建对象</p>
+</li>
+</ul>
+<hr>
+<pre><code>BigDecimal bd = BigDecimal.valueOf(2);
+</code></pre><h2 id="方法-2"><a href="#方法-2" class="headerlink" title="  方法"></a>  方法</h2><pre><code>add(BigDecimal bd)
+subtract(BigDecimal bd)
+multiply(BigDecimal bd)
+divide(BigDecimal bd)
+divide(BigDecimal bd, 保留位数, 舍入方式)
+
+舍入运算
+
+  setScale(保留位数, 舍入方式)
+    舍入运算结果，被封装成新的 BigDecimal 对象
+
+取值
+
+  *)从 Number 继承的6个取值方法
+  *)作为字符串取出
+
+      toString()
+</code></pre><h1 id="java-text-DecimalFormat"><a href="#java-text-DecimalFormat" class="headerlink" title="java.text.DecimalFormat"></a>java.text.DecimalFormat</h1><ul>
+<li>数字格式工具</li>
+<li>数字 –&gt; 数字格式的字符串</li>
+<li><p>数字格式的字符串 –&gt; 数字</p>
+<p>  “￥32,563,735.900”</p>
+<p>创建对象</p>
+</li>
+</ul>
+<hr>
+<pre><code>DecimalFormat f = new DecimalFormat(格式);
+
+  格式: 参考 DecimalFormat 的 API 文档
+
+      &quot;\u00A4###,###.000&quot;
+</code></pre><h2 id="方法-3"><a href="#方法-3" class="headerlink" title="  方法"></a>  方法</h2><pre><code>format(数字)
+     数字格式化成字符串
+
+parse(字符串)
+     字符串解析成数字
+     返回 Number 类型对象
+
+applyPattern(格式)
+     修改格式
+</code></pre><h1 id="java-lang-Math-1"><a href="#java-lang-Math-1" class="headerlink" title="java.lang.Math"></a>java.lang.Math</h1><p>  Math.PI<br>  Math.E<br>  Math.sqrt()<br>  Math.random()<br>  Math.pow()<br>  Math.max()<br>  Math.min()<br>  Math.sin()<br>  Math.cos()<br>  Math.tan()<br>  …</p>
+<h1 id="java-util-Date"><a href="#java-util-Date" class="headerlink" title="java.util.Date"></a>java.util.Date</h1><ul>
+<li><p>封装一个毫秒值，表示一个时间点</p>
+<p>  毫秒值: 1970-1-1 0点开始的毫秒值</p>
+<p>创建对象</p>
+</li>
+</ul>
+<hr>
+<pre><code>1. Date d = new Date();
+
+      封装系统当前时间毫秒值
+
+2. Date d = new Date(600000000000L);
+
+      封装指定的毫秒值
+</code></pre><h2 id="方法-4"><a href="#方法-4" class="headerlink" title="  方法"></a>  方法</h2><pre><code>getTime()
+setTime(long t)
+
+  存取内部毫秒值
+
+compareTo(Date d)
+
+  当前对象与参数对象d比较大小
+  当前对象大，正数
+  当前对象小，负数
+  大小相同，0
+</code></pre><h1 id="java-text-SimpleDateFormat"><a href="#java-text-SimpleDateFormat" class="headerlink" title="java.text.SimpleDateFormat"></a>java.text.SimpleDateFormat</h1><ul>
+<li>日期格式工具</li>
+<li>Date对象 –&gt; 日期格式的字符串</li>
+<li><p>日期格式的字符串 –&gt; Date对象</p>
+<p>创建对象</p>
+</li>
+</ul>
+<hr>
+<pre><code>SimpleDateFormat f = new SimpleDateFormat(格式);
+
+  格式：参考 SimpleDateFormat 文档
+
+      &quot;yyyy-MM-dd HH:mm:ss&quot;
+      &quot;dd/MM/yyyy&quot;
+      &quot;yy-M-d H:m&quot;
+      &quot;yyyy年MM月dd日&quot;
+</code></pre><h2 id="方法-5"><a href="#方法-5" class="headerlink" title="  方法"></a>  方法</h2><pre><code>format(Date对象)
+  Date对象格式化成字符串
+
+parse(字符串)
+  字符串解析成 Date 对象
+
+applyPattern(格式)
+  修改格式
+</code></pre><h1 id="java-util-Calendar"><a href="#java-util-Calendar" class="headerlink" title="java.util.Calendar"></a>java.util.Calendar</h1><ul>
+<li>日历抽象父类</li>
+<li>封装毫秒值表示一个时间点</li>
+<li><p>提供一组时间运算处理方法</p>
+<p>创建对象</p>
+</li>
+</ul>
+<hr>
+<pre><code>1.Calendar c = new GregorianCalendar();
+
+2.Calendar c = Calendar.getInstance();
+
+      在某些地区，可能创建当地历法，
+      中国就是 GregorianCalendar
+</code></pre><h2 id="方法-6"><a href="#方法-6" class="headerlink" title="  方法"></a>  方法</h2><pre><code>get(字段)
+
+              获得日期中指定字段的值，例如：
+
+              c.get(Calendar.YEAR)
+              c.get(Calendar.HOUR_OF_DAY)
+
+      set(字段, 值)
+
+              修改指定字段的值
+
+      set(int year, int month, int date, int hourOfDay, int minute, int second)  
+
+              设置年月日时分秒
+
+      add(int field, int amount) 
+
+              在指定字段上加一个值
+
+              c.add(Calendar.YEAR, 10)
+
+      compareTo(Calendar anotherCalendar) 
+
+              与另一个时间比较大小
+              当前Calendar实例大，返回正数
+              当前Calendar实例小，返回负数
+              相同大小，返回0
+
+      getActualMaximum(int field) 
+
+              获得指定字段实际最大值，
+              用来获得月中的最大天数
+
+      星期日 - 1
+      星期一 - 2
+      星期二 - 3
+      星期三 - 4
+      星期四 - 5
+      星期五 - 6
+      星期六 - 7
+
+
+
+      getTime() 
+
+              获得表示相同时间的 Date 类型实例
+
+      setTime(Date date) 
+
+              将时间设置为指定 Date 实例所表示的时间
+
+      getTimeInMillis() 
+      setTimeInMillis(long millis) 
+
+              毫秒值存取方法
+</code></pre><h1 id="java-util-GregorianCalendar-1"><a href="#java-util-GregorianCalendar-1" class="headerlink" title="java.util.GregorianCalendar"></a>java.util.GregorianCalendar</h1><ul>
+<li>日历子类</li>
+<li>罗马历，即“公历”或“阳历”</li>
+</ul>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><p>  1.<br>    从 email 获取名字<br>        abc@def.com –&gt; abc</p>
+<pre><code>是否是“回文”
+    正着念反着念都相同
+    abcdefedcba
+
+翻转字符串
+    abc --&gt; cba
+</code></pre><p>  2.<br>    获得字符串中的连续数字</p>
+<pre><code>sdrg5647wqe4wer4786w4ertw83er76474w
+
+5647
+4786
+76474
+</code></pre><p>  3.<br>    填写生日<br>    显示“您已经生存了 xxx 天”</p>
+<h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><p>  1.<br>    day0905_变形金刚<br>      七遍疗法之第五遍</p>
+<pre><code>Student 类
+  id,name,gender,age
+  重写 toString() 和 equals() 方法
+
+  提示: 基本类型 ==
+        字符串 equals()
+
+代码狂欢到 6:00 ：
+  day1301_坐标点
+  day1302_字符串
+  day1305_正则表达式
+</code></pre><p>  2.<br>    day0905_变形金刚<br>      七遍疗法之第六遍</p>
+<pre><code>代码狂欢到 6:00 ：
+  day1402_正则表达式
+  day1404_大数字对象
+  day1405_Date
+  day1406_生存天数
+  day1407_Calendar
+</code></pre>
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/课堂笔记/" rel="tag">#-课堂笔记</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/22/corejava05/" rel="next" title="corejava05">
+                <i class="fa fa-chevron-left"></i> corejava05
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/22/corejava03/" rel="prev" title="corejava03">
+                corejava03 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/22/corejava04/"
+           data-title="corejava04" data-url="https://github.com/Nevermore-Lee/2016/04/22/corejava04/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Nevermore-Lee" />
+          <p class="site-author-name" itemprop="name">Nevermore-Lee</p>
+          <p class="site-description motion-element" itemprop="description">Nevermore'Blog是一个基于Github和Hexo的静态Blog，Lee写字的地方。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Nevermore-Lee" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/3292283445/home?wvr=5" target="_blank">
+                  
+                    <i class="fa fa-Weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/ru-neng-zhong-lai" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/HKB0afYijEkI2F3" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#API"><span class="nav-number">1.</span> <span class="nav-text">API</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-lang-包"><span class="nav-number">2.</span> <span class="nav-text">java.lang 包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-lang-Object"><span class="nav-number">3.</span> <span class="nav-text">java.lang.Object</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-util-regex-Matcher"><span class="nav-number">4.</span> <span class="nav-text">java.util.regex.Matcher</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-lang-Math"><span class="nav-number">5.</span> <span class="nav-text">java.lang.Math</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-util-GregorianCalendar"><span class="nav-number">6.</span> <span class="nav-text">java.util.GregorianCalendar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object"><span class="nav-number">7.</span> <span class="nav-text">Object</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String"><span class="nav-number">8.</span> <span class="nav-text">String</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象"><span class="nav-number">8.1.</span> <span class="nav-text">  创建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">8.2.</span> <span class="nav-text">  方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#StringBuffer"><span class="nav-number">9.</span> <span class="nav-text">StringBuffer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象-1"><span class="nav-number">9.1.</span> <span class="nav-text">  创建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-1"><span class="nav-number">9.2.</span> <span class="nav-text">  方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式-Regex"><span class="nav-number">10.</span> <span class="nav-text">正则表达式 Regex</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-util-regex-Matcher-1"><span class="nav-number">11.</span> <span class="nav-text">java.util.regex.Matcher</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Matcher-方法"><span class="nav-number">11.1.</span> <span class="nav-text">  Matcher 方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本类型包装类"><span class="nav-number">12.</span> <span class="nav-text">基本类型包装类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#java-lang-Number"><span class="nav-number">12.1.</span> <span class="nav-text">  java.lang.Number</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Integer"><span class="nav-number">12.2.</span> <span class="nav-text">  Integer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Double"><span class="nav-number">12.3.</span> <span class="nav-text">  Double</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动装箱、自动拆箱"><span class="nav-number">12.4.</span> <span class="nav-text">  自动装箱、自动拆箱</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-math-BigInteger"><span class="nav-number">13.</span> <span class="nav-text">java.math.BigInteger</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-2"><span class="nav-number">13.1.</span> <span class="nav-text">  方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-text-DecimalFormat"><span class="nav-number">14.</span> <span class="nav-text">java.text.DecimalFormat</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-3"><span class="nav-number">14.1.</span> <span class="nav-text">  方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-lang-Math-1"><span class="nav-number">15.</span> <span class="nav-text">java.lang.Math</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-util-Date"><span class="nav-number">16.</span> <span class="nav-text">java.util.Date</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-4"><span class="nav-number">16.1.</span> <span class="nav-text">  方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-text-SimpleDateFormat"><span class="nav-number">17.</span> <span class="nav-text">java.text.SimpleDateFormat</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-5"><span class="nav-number">17.1.</span> <span class="nav-text">  方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-util-Calendar"><span class="nav-number">18.</span> <span class="nav-text">java.util.Calendar</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-6"><span class="nav-number">18.1.</span> <span class="nav-text">  方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java-util-GregorianCalendar-1"><span class="nav-number">19.</span> <span class="nav-text">java.util.GregorianCalendar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">20.</span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业"><span class="nav-number">21.</span> <span class="nav-text">作业</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nevermore-Lee</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Nevermore-Lee"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("k1rNkxhvNEewLgHl14DksPvs-gzGzoHsz", "Pok5t6Ke55IERAhVhYNOVmea");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

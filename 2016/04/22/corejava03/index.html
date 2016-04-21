@@ -1,0 +1,1152 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Nevermore'Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="基本类型运算符 +-*/%&amp;gt; == != &amp;amp;&amp;amp;||! &amp;amp;|^~&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; &amp;lt;&amp;lt; ++– ?: = +=流程控制数组
+=====================================
+面向对象
+人为抽象的一种编程模型
+复杂问题拆分成一个一个的小问题，通过解决每个小问题，来解决复杂问题
+类对象、实例引用构造方法this">
+<meta property="og:type" content="article">
+<meta property="og:title" content="corejava03">
+<meta property="og:url" content="https://github.com/Nevermore-Lee/2016/04/22/corejava03/index.html">
+<meta property="og:site_name" content="Nevermore'Blog">
+<meta property="og:description" content="基本类型运算符 +-*/%&amp;gt; == != &amp;amp;&amp;amp;||! &amp;amp;|^~&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; &amp;lt;&amp;lt; ++– ?: = +=流程控制数组
+=====================================
+面向对象
+人为抽象的一种编程模型
+复杂问题拆分成一个一个的小问题，通过解决每个小问题，来解决复杂问题
+类对象、实例引用构造方法this">
+<meta property="og:updated_time" content="2016-04-21T16:18:34.411Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="corejava03">
+<meta name="twitter:description" content="基本类型运算符 +-*/%&amp;gt; == != &amp;amp;&amp;amp;||! &amp;amp;|^~&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; &amp;lt;&amp;lt; ++– ?: = +=流程控制数组
+=====================================
+面向对象
+人为抽象的一种编程模型
+复杂问题拆分成一个一个的小问题，通过解决每个小问题，来解决复杂问题
+类对象、实例引用构造方法this">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> corejava03 | Nevermore'Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Nevermore'Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Your Soul Is Mine!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                corejava03
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-22T00:12:38+08:00" content="2016-04-22">
+              2016-04-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/22/corejava03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/22/corejava03/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/22/corejava03/" class="leancloud_visitors" data-flag-title="corejava03">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>基本类型<br>运算符 +-*/%&gt; == != &amp;&amp;||! &amp;|^~&gt;&gt; &gt;&gt;&gt; &lt;&lt; ++– ?: = +=<br>流程控制<br>数组</p>
+<p>=====================================</p>
+<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><ul>
+<li>人为抽象的一种编程模型</li>
+<li><p>复杂问题拆分成一个一个的小问题，<br>通过解决每个小问题，来解决复杂问题</p>
+<p>类<br>对象、实例<br>引用<br>构造方法<br>this<br>方法重载<br>继承<br>方法重写<br>super<br>多态<br>instanceof<br>抽象类<br>final<br>static<br>访问控制符<br>接口<br>内部类</p>
+</li>
+</ul>
+<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><ul>
+<li>理解成“图纸”</li>
+<li>对事物、算法、逻辑、概念的抽象</li>
+<li>将相关的数据、运算代码，<br>封装在一个类组件中</li>
+</ul>
+<h1 id="对象、实例"><a href="#对象、实例" class="headerlink" title="对象、实例"></a>对象、实例</h1><ul>
+<li>理解成从“图纸”生产出的具体“物体”</li>
+<li>每个对象，占用独立的的内存空间，<br>保存各自的属性数据</li>
+<li>每个对象，可以独立控制它执行<br>指定的方法代码</li>
+</ul>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><ul>
+<li>理解成“遥控器”</li>
+<li>引用变量中，保存一个对象的内存地址</li>
+<li><p>通过引用变量，可以找到<br>一个对象的内存空间，<br>访问它的属性，或调用它的方法</p>
+</li>
+<li><p>引用变量的特殊值 null</p>
+<p>  *）null 空</p>
+<pre><code>不引用任何对象的内存地址
+</code></pre></li>
+</ul>
+<h1 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h1><ul>
+<li><p>新建实例时，执行的特殊方法</p>
+<p>  new Soldier()<br>  new Car()<br>  new Dog()<br>  new Point()</p>
+</li>
+<li><p>一个类，必须有构造方法</p>
+</li>
+<li><p>如果自己不编写构造方法，<br>编译器会添加默认构造方法</p>
+<pre><code>class A {
+    public A() {
+
+    }
+}
+</code></pre></li>
+<li><p>构造方法重载（不同参数）</p>
+<pre><code>class A {
+    public A(int i) {
+        ...
+    }
+    public A(int i,double d) {
+        ...
+    }
+    public A(int i,double d,String s) {
+        ...
+    }
+}
+</code></pre></li>
+<li><p>构造方法的作用： 不知道</p>
+<p>  *)常用来为成员变量赋值</p>
+</li>
+</ul>
+<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><ul>
+<li><p>两种用法：引用当前对象、构造方法间调用</p>
+</li>
+<li><p>引用当前对象</p>
+<pre><code>this保存当前对象的内存地址 
+可以用 this 调用当前对象的成员
+
+  this.name
+  this.f()
+</code></pre></li>
+<li><p>构造方法之间调用 this(…)</p>
+<pre><code>*)减少代码重复
+*)一般从参数少的方法，
+  调用参数多的方法，
+  多个参数集中在一个方法中处理
+
+*)必须是首行代码
+</code></pre></li>
+</ul>
+<h1 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h1><ul>
+<li>同名不同参</li>
+</ul>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><ul>
+<li><p>作用：代码重用、代码复用</p>
+</li>
+<li><p>单继承：<br>  <em>)一个类只能继承一个父类
+  </em>)一个父类可以有多个子类</p>
+</li>
+<li><p>不继承构造方法</p>
+</li>
+<li><p>不继承不可见的成员</p>
+</li>
+<li><p>方法重写 Override</p>
+<p>  *)继承的方法，在子类中重新编写</p>
+</li>
+<li><p>创建子类对象</p>
+<p>  1)先创建父类对象<br>  2)再创建子类对象</p>
+<p>  *)两个对象绑定在一起，作为一个子类对象</p>
+</li>
+</ul>
+<ul>
+<li><p>构造方法</p>
+<p>  1)创建父类对象时执行父类构造方法<br>  2)创建子类对象时执行子类构造方法</p>
+<p>  *)默认执行父类无参构造方法</p>
+<pre><code>super()
+</code></pre><p>  *)可以手动调用父类有参构造方法</p>
+<pre><code>super(参数)
+</code></pre></li>
+</ul>
+<ul>
+<li><p>super 两种用法</p>
+<p>  *)重写方法时，调用父类同一个方法的代码</p>
+<pre><code>super.toString()
+</code></pre><p>  *)手动调用父类构造方法</p>
+<pre><code>super()     默认
+super(参数) 手动
+
+*)必须是首行代码
+</code></pre></li>
+</ul>
+<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><ul>
+<li><p>作用： 一致的类型</p>
+</li>
+<li><p>类型转换</p>
+<p>  *) 向上转型</p>
+<pre><code>子类对象，转换成父类型，
+被当做父类型处理
+
+ *)向上转型之后，只能调用父类中定义的
+   通用成员，不能调用子类特有的成员
+</code></pre><p>  *) 向下转型</p>
+<pre><code>已经转为父类型的子类对象，
+再转回成子类型
+</code></pre></li>
+<li><p>instanceof</p>
+<p>  <em>) 判断对象的类型
+  </em>) 对真实类型及其父类型判断，</p>
+<pre><code>都返回 true
+</code></pre><p>  Shape s = new Line();</p>
+<p>  s instanceof Line   true<br>  s instanceof Shape  true</p>
+</li>
+</ul>
+<h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><ul>
+<li><p>作用：<br>  <em>)为子类提供通用代码
+  </em>)为子类提供通用方法的定义      </p>
+</li>
+<li><p>半成品类</p>
+</li>
+<li>不能创建实例</li>
+<li>只能创建子类的实例</li>
+<li>包含抽象方法的类，必须是抽象类</li>
+<li><p>抽象方法调用</p>
+<p>  执行子类中实现的方法</p>
+</li>
+</ul>
+<h1 id="final"><a href="#final" class="headerlink" title="final"></a>final</h1><ul>
+<li><p>修饰变量、方法、类</p>
+</li>
+<li><p>变量</p>
+<p>  *)变量的值不可变，称为“常量”</p>
+<pre><code>final int a = 10;
+//a = 11;//错
+
+final Point a = new Point(3, 4);
+a.x = 30;//对
+//a = new Point(4, 5);//错
+//a = null;//错
+</code></pre></li>
+<li><p>方法</p>
+<p>  在子类中不能重写这个方法</p>
+</li>
+<li><p>类</p>
+<p>  没有子类，不能被继承</p>
+</li>
+</ul>
+<h1 id="static"><a href="#static" class="headerlink" title="static"></a>static</h1><ul>
+<li>静态</li>
+<li><p>静态成员属于类，而不属于实例</p>
+<p>  class Soldier {</p>
+<pre><code>int id;
+static int count;
+</code></pre><p>  }</p>
+<p>  Soldier s1 = new Soldier();<br>  Soldier s2 = new Soldier();<br>  s1.id = 9527;<br>  s2.id = 9528;</p>
+<p>  s1.count = 1;<br>  s2.count = 2;</p>
+<p>  print(s1.id);<br>  print(s1.count);</p>
+</li>
+<li><p>访问静态成员，一般使用类名调用</p>
+<p>  Soldier.count = 1;<br>  Soldier.count = 2;</p>
+</li>
+<li><p>什么时候使用静态</p>
+<p>  *)使用原则： 能不用就不用</p>
+<pre><code>静态是“非面向对象”的语法
+</code></pre><p>  *)使用场景：</p>
+<pre><code>*)共享的数据
+*)工具方法
+
+    Math.sqrt()
+    Math.random()
+    Arrays.toString()
+    Integer.parseInt()
+</code></pre></li>
+</ul>
+<ul>
+<li><p>静态初始化块</p>
+<p>  class A {</p>
+<pre><code>static {
+    类加载时，只执行一次
+}
+</code></pre><p>  }</p>
+</li>
+</ul>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><ul>
+<li><p>static final</p>
+<p>  final   不可变<br>  static  只有一个内存地址，节省内存</p>
+</li>
+<li><p>常量名习惯使用全大写，单词之间加下划线</p>
+<p>  static final int MAX_VALUE = 32;</p>
+</li>
+</ul>
+<h1 id="对象创建过程"><a href="#对象创建过程" class="headerlink" title="对象创建过程"></a>对象创建过程</h1><p>  class A {<br>      int v1 = 1;           //实例变量,非静态<br>      static int v2 = 2;    //类变量,静态<br>      static {<br>          …<br>      }<br>      public A() {<br>          …<br>      }</p>
+<h2 id=""><a href="#" class="headerlink" title="  }"></a>  }</h2><p>  class B extends A{<br>      int v3 = 3;<br>      static int v4 = 4;<br>      static {<br>          …<br>      }<br>      public B() {<br>          …<br>      }</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title="  }"></a>  }</h2><p>  B b = new B();</p>
+<h2 id="创建过程："><a href="#创建过程：" class="headerlink" title="  创建过程："></a>  创建过程：</h2><pre><code>第一次用到 A 类和 B 类
+  1.加载父类,为父类静态变量分配内存
+  2.加载子类,为子类静态变量分配内存
+  3.执行父类静态变量赋值运算和静态初始化块
+  4.执行子类静态变量赋值运算和静态初始化块
+
+再次用到 A 类和 B 类
+  5.为父类对象分配内存，为非静态变量分配内存
+  6.为子类对象分配内存，为非静态变量分配内存
+  7.执行父类非静态变量赋值运算
+  8.执行父类构造方法
+  9.执行子类非静态变量赋值运算
+  10.执行子类构造方法
+</code></pre><h1 id="访问控制符"><a href="#访问控制符" class="headerlink" title="访问控制符"></a>访问控制符</h1><ul>
+<li><p>控制类或类中的成员的访问范围</p>
+<pre><code>类    包    子类    任意
+</code></pre><p>public      O     O     O       O<br>protected   O     O     O<br>[default]   O     O<br>private     O</p>
+</li>
+<li><p>选择原则：尽量小范围访问</p>
+<p>  public 是与其他开发者的契约，<br>  约定公开的东西会保持稳定不变</p>
+</li>
+</ul>
+<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><ul>
+<li>作用：结构设计工具，用来解耦合</li>
+<li>是极端的抽象类</li>
+<li>用 interface 代替了 class 关键字</li>
+<li>用 implements 代替了 extends 关键字</li>
+<li><p>在接口中只能定义：</p>
+<p>  <em>)公共的常量
+  </em>)公共的抽象方法<br>  *)公共的内部类、内部接口</p>
+</li>
+<li><p>一个类可以同时实现多个接口</p>
+<p>  class A implements B,C,D {<br>  }</p>
+<p>  class A extends B implements C,D,E {<br>  }</p>
+</li>
+<li><p>接口之间继承</p>
+<p>  interface A extends B,C,D {<br>  }</p>
+</li>
+</ul>
+<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><ul>
+<li><p>定义在类内部，或局部代码块内部的类</p>
+</li>
+<li><p>非静态内部类</p>
+<pre><code>class A {
+    class Inner {
+    }
+}
+
+A a = new A();
+A.Inner i = a.new Inner();        
+</code></pre></li>
+<li><p>静态内部类</p>
+<pre><code>class A {
+    static class Inner {
+    }
+}
+
+A.Inner i = new A.Inner();
+</code></pre></li>
+<li><p>局部内部类</p>
+<pre><code>class A {
+    Weapon a() {
+        class Inner implements Weapon {
+        }
+
+        Inner i = new Inner();
+        return i;
+    }
+}
+
+A a = new A();
+Weapon w = a.a();
+</code></pre></li>
+</ul>
+<ul>
+<li><p>匿名内部类</p>
+<p>  Weapon w = new Weapon() {…};</p>
+<p>  <em>)大括号是匿名类
+  </em>)new 新建匿名类的实例<br>  *)继承 Weapon 作为 Weapon 的子类型</p>
+</li>
+</ul>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><p>  1.<br>    定义士兵类<br>    tarena.day0605.Soldier<br>    属性：<br>        int id<br>        int blood<br>    方法：<br>        go()<br>        attack()</p>
+<p>  2.<br>    手电筒</p>
+<pre><code>定义“手电筒”类
+tarena.day0701.FlashLight
+属性：
+    int color
+    boolean on
+方法：
+    turnOn()
+    turnOff()
+</code></pre><p>  3.<br>    汽车</p>
+<pre><code>tarena.day0702.Car
+属性：
+    String brand
+    String color
+    int speed
+方法：
+    go()
+    stop()
+</code></pre><p>  4.<br>    电子宠物</p>
+<pre><code>tarena.day0703.Dog
+属性：
+    String name
+    int hungry
+    int happy
+方法：
+    feed()
+    play()
+    punish()
+</code></pre><p>  5.<br>    平面坐标点</p>
+<pre><code>tarena.day0704.Point
+属性：
+    int x
+    int y
+方法：
+    toString() 成员变量的值连接成字符串
+    distance() 距原点的距离
+</code></pre><p>  6.<br>    学生<br>    tarena.day0705.Student<br>    属性：<br>        int id<br>        String name<br>        String gender<br>        int age<br>    构造方法：<br>        Student()<br>        Student(id,name)<br>        Student(id,name,gender)<br>        Student(id,name,gender,age)<br>    方法：<br>        toString()<br>          四个成员变量的值连接成字符串</p>
+<p>  7.<br>    Person<br>      |- Student<br>      |- Employee</p>
+<pre><code>Person
+  属性：
+      String name
+      String gender
+      int age
+  构造方法：
+      Person()
+      Person(name,gender,age)
+  方法：
+      toString()
+        属性的值连接成字符串
+
+Student
+  属性：
+      String school
+Employee
+  属性：
+      String company
+</code></pre><p>  8.<br>    二维点三维点</p>
+<pre><code>Point
+  |- Point3D
+
+Point
+  属性：
+      int x
+      int y
+  构造方法：
+      Point(x, y)
+  方法：
+      toString()
+      distance()
+
+Point3D
+  属性：
+      int z
+  构造方法：
+      Point(x,y,z)
+  方法：
+      toString()
+      distance()
+</code></pre><p>  9.<br>    电子宠物</p>
+<pre><code>Pet
+  |- Dog
+  |- Cat
+</code></pre><p>  10.<br>    图形形状</p>
+<pre><code>Shape
+  |- Line
+  |- Circle
+  |- Square
+
+Shape
+  方法：
+    draw()
+    clean()
+
+子类中重写 draw() 方法
+</code></pre><p>  11.<br>      员工工资、奖金<br>      Employee<br>        |- Programmer<br>        |- Manager</p>
+<pre><code>Employee
+  gongZi()    抽象
+  jiangJin()  抽象
+  zongHe()
+</code></pre><h1 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h1><p>  1.<br>    day0508<em>冒泡排序<br>    day0601</em>二分法查找<br>      七遍疗法之第一、二、三遍<br>      运算逻辑，回看小电影<br>    选择排序<br>                            min<br>        11, 28, 59, 63, 85, 82, 84, 88, 97<br>                        i<br>        在 i 到末尾范围内，找到最小值的位置，<br>        与 i 位置交换<br>        找到最小值的位置:<br>            参考 day0504<em>数组<br>            可以先假设 i 位置最小<br>    代码狂欢 6:30<br>        day0508</em>冒泡排序<br>        day0601<em>二分法查找<br>        day0603</em>递归求阶乘<br>        day0605_士兵，完成 f4()f5()f6()</p>
+<p>  2.<br>    day0508<em>冒泡排序<br>    day0601</em>二分法查找<br>      七遍疗法之第四遍<br>      运算逻辑，回看小电影</p>
+<pre><code>代码狂欢 6:30 ：
+  day0701_FlashLight
+  day0703_电子宠物
+  day0704_坐标点
+  day0705_学生
+</code></pre><p>  3.<br>    day0508<em>冒泡排序<br>    day0601</em>二分法查找<br>      七遍疗法之第五遍<br>      运算逻辑，回看小电影</p>
+<pre><code>代码狂欢 6:30 ：
+  day0703_电子宠物
+  day0801_人类
+  day0802_二维点三维点
+  day0803_图形形状
+</code></pre><p>  4.<br>    day0508<em>冒泡排序<br>    day0601</em>二分法查找<br>      七遍疗法之第六遍<br>      运算逻辑，回看小电影</p>
+<pre><code>代码狂欢 6:30 ：
+  day0905_变形金刚
+    1) 定义 Weapon 接口
+    2) 三个实现子类
+    3) Transformer
+    4) MainActivity
+</code></pre><p>  5.<br>    day0508<em>冒泡排序<br>    day0601</em>二分法查找<br>      七遍疗法之第七遍<br>      运算逻辑，回看小电影</p>
+<pre><code>day0905_变形金刚
+  七遍疗法之第一遍
+
+代码狂欢 6:30 ：
+  day1002_窗口启动
+  day1003_各种监听器
+</code></pre><p>  6.<br>    day0905_变形金刚<br>      七遍疗法之第二遍</p>
+<p>  7.<br>    day0905_变形金刚<br>      七遍疗法之第三、四遍</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/22/corejava04/" rel="next" title="corejava04">
+                <i class="fa fa-chevron-left"></i> corejava04
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/22/corejava02/" rel="prev" title="corejava02">
+                corejava02 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/22/corejava03/"
+           data-title="corejava03" data-url="https://github.com/Nevermore-Lee/2016/04/22/corejava03/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Nevermore-Lee" />
+          <p class="site-author-name" itemprop="name">Nevermore-Lee</p>
+          <p class="site-description motion-element" itemprop="description">Nevermore'Blog是一个基于Github和Hexo的静态Blog，Lee写字的地方。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Nevermore-Lee" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/3292283445/home?wvr=5" target="_blank">
+                  
+                    <i class="fa fa-Weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/ru-neng-zhong-lai" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/HKB0afYijEkI2F3" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类"><span class="nav-number">2.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象、实例"><span class="nav-number">3.</span> <span class="nav-text">对象、实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">4.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造方法"><span class="nav-number">5.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#this"><span class="nav-number">6.</span> <span class="nav-text">this</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法重载"><span class="nav-number">7.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承"><span class="nav-number">8.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多态"><span class="nav-number">9.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类"><span class="nav-number">10.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#final"><span class="nav-number">11.</span> <span class="nav-text">final</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#static"><span class="nav-number">12.</span> <span class="nav-text">static</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常量"><span class="nav-number">13.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象创建过程"><span class="nav-number">14.</span> <span class="nav-text">对象创建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">14.1.</span> <span class="nav-text">  }</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">14.2.</span> <span class="nav-text">  }</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建过程："><span class="nav-number">14.3.</span> <span class="nav-text">  创建过程：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#访问控制符"><span class="nav-number">15.</span> <span class="nav-text">访问控制符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口"><span class="nav-number">16.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类"><span class="nav-number">17.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#练习"><span class="nav-number">18.</span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业"><span class="nav-number">19.</span> <span class="nav-text">作业</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nevermore-Lee</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Nevermore-Lee"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("k1rNkxhvNEewLgHl14DksPvs-gzGzoHsz", "Pok5t6Ke55IERAhVhYNOVmea");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

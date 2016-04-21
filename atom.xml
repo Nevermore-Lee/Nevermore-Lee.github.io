@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Nevermore-Lee/"/>
-  <updated>2016-04-12T14:59:08.631Z</updated>
+  <updated>2016-04-21T16:15:13.288Z</updated>
   <id>https://github.com/Nevermore-Lee/</id>
   
   <author>
@@ -16,31 +16,2088 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>面向对象</title>
-    <link href="https://github.com/Nevermore-Lee/2016/04/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>https://github.com/Nevermore-Lee/2016/04/12/面向对象/</id>
-    <published>2016-04-12T14:55:27.000Z</published>
-    <updated>2016-04-12T14:59:08.631Z</updated>
+    <title>android01</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/22/android01/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/22/android01/</id>
+    <published>2016-04-21T16:13:54.000Z</published>
+    <updated>2016-04-21T16:15:13.288Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;面向对象的编程思想&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;面向对象的编程思想的终极目标是消除重复代码&lt;/li&gt;
-&lt;li&gt;面向对象是一种先考虑让哪个对象去做，在考虑具体怎么做&lt;/li&gt;
-&lt;li&gt;面向对象从抽象到具体&lt;br&gt;4，面向对象是&lt;/li&gt;
+    <content type="html">&lt;h1 id=&quot;Activity&quot;&gt;&lt;a href=&quot;#Activity&quot; class=&quot;headerlink&quot; title=&quot;Activity&quot;&gt;&lt;/a&gt;Activity&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;活动&lt;/li&gt;
+&lt;li&gt;理解成“窗口”&lt;/li&gt;
+&lt;li&gt;Activity 中要编写界面控制代码&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通常一个窗口，只对应显示一个界面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;启动新窗口&lt;/p&gt;
+&lt;p&gt;  1) 写纸条&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Intent i = 
+  new Intent(当前窗口对象, 目标窗口类);
+
+*)获得当前窗口对象类型所在的包名
+*)在这个包下面，找到目标窗口类
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2) 传纸条&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;startActivity(i);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;尺寸单位&quot;&gt;&lt;a href=&quot;#尺寸单位&quot; class=&quot;headerlink&quot; title=&quot;尺寸单位&quot;&gt;&lt;/a&gt;尺寸单位&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;dp、dip&lt;/p&gt;
+&lt;p&gt;  像素密度无关的单位&lt;/p&gt;
+&lt;p&gt;  1dp ≈ 1/160 英寸&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sp&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)字体大小单位
+  &lt;/em&gt;)默认与 dp 相同&lt;br&gt;  *)会随系统字体大小设置缩放&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;px  像素  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;pt  打印行业中的“磅”&lt;/li&gt;
+&lt;li&gt;in  英寸&lt;/li&gt;
+&lt;li&gt;mm  毫米&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;布局&quot;&gt;&lt;a href=&quot;#布局&quot; class=&quot;headerlink&quot; title=&quot;布局&quot;&gt;&lt;/a&gt;布局&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;控制内部空间显示的位置及大小&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;相对布局 RelativeLayout&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;线性布局 LinearLayout&lt;/li&gt;
+&lt;li&gt;表格布局 TableLayout&lt;/li&gt;
+&lt;li&gt;帧布局 FrameLayout&lt;/li&gt;
+&lt;li&gt;网格布局 GridLayout&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;相对布局-RelativeLayout&quot;&gt;&lt;a href=&quot;#相对布局-RelativeLayout&quot; class=&quot;headerlink&quot; title=&quot;相对布局 RelativeLayout&quot;&gt;&lt;/a&gt;相对布局 RelativeLayout&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;停靠父控件边界&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;alignParentTop      上
+alignParentRight    右
+alignParentBottom   底
+alignParentLeft     左
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;相对父控件居中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;centerInParent      正中
+centerHorizontal    水平居中
+centerVertical      垂直居中
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;停靠周围控件边界&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;above
+below
+toLeftOf
+toRightOf
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;与周围控件边界对齐&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;alignTop        上边
+alignRight      右边
+alignBottom     底边
+alignLeft       左边
+alignBaseline   基线
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;线性布局-LinearLayout&quot;&gt;&lt;a href=&quot;#线性布局-LinearLayout&quot; class=&quot;headerlink&quot; title=&quot;线性布局 LinearLayout&quot;&gt;&lt;/a&gt;线性布局 LinearLayout&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;布局方向&lt;/p&gt;
+&lt;p&gt;  orientation=”horizontal”    水平（默认）&lt;br&gt;  orientation=”vertical”      垂直&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;比例、比重&lt;/p&gt;
+&lt;p&gt;  按比例分配剩余的可用空间&lt;/p&gt;
+&lt;p&gt;  layout_weight=”3”&lt;br&gt;  layout_weight=”1.5”&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)在垂直布局中，可以选择将高度设置为 “0dp”
+  &lt;/em&gt;)在水平布局中，可以选择将宽度设置为 “0dp”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重力、引力&lt;/p&gt;
+&lt;p&gt;  layout_gravity&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;top                   上
+right                 右
+bottom                下
+left                  左
+center                正中
+center_horizontal     水平居中
+center_vertical       垂直居中
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;表格布局-TableLayout&quot;&gt;&lt;a href=&quot;#表格布局-TableLayout&quot; class=&quot;headerlink&quot; title=&quot;表格布局 TableLayout&quot;&gt;&lt;/a&gt;表格布局 TableLayout&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TableLayout 是线性布局子类，&lt;br&gt;是垂直线性布局&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;表格行&lt;/p&gt;
+&lt;p&gt;  &lt;tablerow&gt;&lt;br&gt;  是线性布局子类，&lt;br&gt;  是水平线性布局&lt;/tablerow&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;拉伸列&lt;/p&gt;
+&lt;p&gt;  stretchColumns=”0,1,2”&lt;br&gt;  stretchColumns=”1,3”&lt;br&gt;  stretchColumns=”0,2,3”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;比例比重&lt;br&gt;  weight=”3”&lt;/p&gt;
+&lt;p&gt;  按比例分配行内的空间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;表格布局中不能设置控件宽度&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;帧布局-FrameLayout&quot;&gt;&lt;a href=&quot;#帧布局-FrameLayout&quot; class=&quot;headerlink&quot; title=&quot;帧布局 FrameLayout&quot;&gt;&lt;/a&gt;帧布局 FrameLayout&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一般是用来重叠显示控件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重力引力&lt;br&gt; layout_gravity&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;top
+right
+bottom
+left
+center
+center_horizontal
+center_vertical
+
+right|center_vertical
+right|bottom
+bottom|center_horizontal
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;融合 &lt;merge&gt;&lt;/merge&gt;&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)窗口中存在默认的帧布局
+  &lt;/em&gt;)将自己的帧布局中的控件，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;直接放到默认帧布局中，
+减少布局嵌套
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;网格布局-GridLayout&quot;&gt;&lt;a href=&quot;#网格布局-GridLayout&quot; class=&quot;headerlink&quot; title=&quot;网格布局 GridLayout&quot;&gt;&lt;/a&gt;网格布局 GridLayout&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;列数量&lt;/p&gt;
+&lt;p&gt;  columnCount=”4”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;放置的列&lt;/p&gt;
+&lt;p&gt;  column=”2”  第三列&lt;br&gt;  column=”4”  第五列&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;跨行&lt;/p&gt;
+&lt;p&gt;  rowSpan=”3”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;跨列&lt;/p&gt;
+&lt;p&gt;  columnSpan=”2”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重力引力&lt;/p&gt;
+&lt;p&gt;  layout_gravity&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fill
+fill_horizontal
+fill_vertical
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;space&gt;
+
+&lt;p&gt;  空白控件&lt;/p&gt;
+&lt;/space&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Activity&quot;&gt;&lt;a href=&quot;#Activity&quot; class=&quot;headerlink&quot; title=&quot;Activity&quot;&gt;&lt;/a&gt;Activity&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;活动&lt;/li&gt;
+&lt;li&gt;理解成“窗口”&lt;/li&gt;
+&lt;li&gt;Activity 中要
+    
+    </summary>
+    
+    
+      <category term="-课堂笔记" scheme="https://github.com/Nevermore-Lee/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>corejava01</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/22/corejava01/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/22/corejava01/</id>
+    <published>2016-04-21T16:13:26.000Z</published>
+    <updated>2016-04-21T16:17:07.995Z</updated>
+    
+    <content type="html">&lt;p&gt;王海涛&lt;/p&gt;
+&lt;h1 id=&quot;wanght-tedu-cn&quot;&gt;&lt;a href=&quot;#wanght-tedu-cn&quot; class=&quot;headerlink&quot; title=&quot;wanght@tedu.cn&quot;&gt;&lt;/a&gt;wanght@tedu.cn&lt;/h1&gt;&lt;p&gt;java基本语法&lt;br&gt;面向对象&lt;br&gt;Android入门&lt;br&gt;基础 API&lt;/p&gt;
+&lt;p&gt;Android基础&lt;br&gt;java 高级API&lt;/p&gt;
+&lt;p&gt;Android高级&lt;/p&gt;
+&lt;p&gt;Android项目&lt;/p&gt;
+&lt;h1 id=&quot;学习方法&quot;&gt;&lt;a href=&quot;#学习方法&quot; class=&quot;headerlink&quot; title=&quot;学习方法&quot;&gt;&lt;/a&gt;学习方法&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;敲！！！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;练键盘神器： 金山打字通&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;开发环境&quot;&gt;&lt;a href=&quot;#开发环境&quot; class=&quot;headerlink&quot; title=&quot;开发环境&quot;&gt;&lt;/a&gt;开发环境&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;jdk&lt;/li&gt;
+&lt;li&gt;eclipse&lt;/li&gt;
+&lt;li&gt;android sdk&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;adt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;android studio&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;jdk&quot;&gt;&lt;a href=&quot;#jdk&quot; class=&quot;headerlink&quot; title=&quot;jdk&quot;&gt;&lt;/a&gt;jdk&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;java 开发库&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;包含开发工具、基础类库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置环境变量  &lt;/p&gt;
+&lt;p&gt;  JAVA_HOME&lt;br&gt;  CLASSPATH&lt;br&gt;  PATH&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;JAVA_HOME&lt;br&gt;  配置 jdk 的安装目录路径&lt;br&gt;  C:\Program Files (x86)\Java\jdk1.7.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CLASSPATH&lt;br&gt;  CLASSPATH=.   &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;PATH&lt;br&gt;  是系统中已经存在的变量，&lt;br&gt;  在其中添加新的路径 jdk目录\bin&lt;/p&gt;
+&lt;p&gt;  %JAVA_HOME%\bin;%PATH%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;eclipse&quot;&gt;&lt;a href=&quot;#eclipse&quot; class=&quot;headerlink&quot; title=&quot;eclipse&quot;&gt;&lt;/a&gt;eclipse&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;集成的开发环境&lt;/li&gt;
+&lt;li&gt;解压缩就能用&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基本版、java ee企业版&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;工作空间 workspace&lt;/p&gt;
+&lt;p&gt;  存放开发的文件的目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;android-sdk&quot;&gt;&lt;a href=&quot;#android-sdk&quot; class=&quot;headerlink&quot; title=&quot;android sdk&quot;&gt;&lt;/a&gt;android sdk&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;首先安装 “android sdk manager”&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sdk管理器，用来安装、删除&lt;br&gt;开发工具、开发库、扩展工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;环境变量&lt;/p&gt;
+&lt;p&gt;  ANDROID_SDK_HOME&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;配置android sdk安装目录路径
+d:\software\android-sdk-windows
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;AVD&lt;/p&gt;
+&lt;p&gt;  安卓虚拟设备&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;ADT&quot;&gt;&lt;a href=&quot;#ADT&quot; class=&quot;headerlink&quot; title=&quot;ADT&quot;&gt;&lt;/a&gt;ADT&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Android 开发工具&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;是 eclipse 插件&lt;br&gt;使用 eclipse 开发平台，来开发安卓应用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装&lt;/p&gt;
+&lt;p&gt;  *)在线安装、离线安装，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;自行“百度”
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)推荐使用的安装方式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1)在 eclipse\dropins\ 目录下
+  新建 adt 目录
+
+2)复制 adt 离线安装包中的
+  plugins 和 features 目录
+  到第一步新建的 adt 目录下
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在 eclipse 中配置 android sdk 目录路径&lt;/p&gt;
+&lt;p&gt;  window-&amp;gt;preferences-&amp;gt;左侧 Android&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;android-studio&quot;&gt;&lt;a href=&quot;#android-studio&quot; class=&quot;headerlink&quot; title=&quot;android studio&quot;&gt;&lt;/a&gt;android studio&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;新的 android 开发工具&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;eclipse + adt 开发工具将被淘汰&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装绑定 android sdk 的集成版(1G)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;第一次启动时，会联网更新&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;第一个-java-程序-Hello-world&quot;&gt;&lt;a href=&quot;#第一个-java-程序-Hello-world&quot; class=&quot;headerlink&quot; title=&quot;第一个 java 程序 Hello world&quot;&gt;&lt;/a&gt;第一个 java 程序 Hello world&lt;/h1&gt;&lt;p&gt;  1.新建java项目: day0101_HelloWorld&lt;br&gt;  2.新建类: HelloWorld&lt;br&gt;  3.在类中添加代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(&amp;quot;Hello world!!!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  4.保存(保存时自动编译)&lt;br&gt;  5.执行 ctrl+f11&lt;/p&gt;
+&lt;p&gt;  *) 源码文件编译成“字节码文件”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*.java --&amp;gt; *.class
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *) 先启动java虚拟机（JVM）&lt;br&gt;     虚拟机会加载字节码文件，&lt;br&gt;     并执行其中 main() 方法代码&lt;/p&gt;
+&lt;h1 id=&quot;第一个-android-程序-Hello-world&quot;&gt;&lt;a href=&quot;#第一个-android-程序-Hello-world&quot; class=&quot;headerlink&quot; title=&quot;第一个 android 程序 Hello world&quot;&gt;&lt;/a&gt;第一个 android 程序 Hello world&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;新建 android 项目: day0102_HelloWorld&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;执行&lt;/p&gt;
+&lt;p&gt;  右键点击项目-&amp;gt;run as-&amp;gt;android application&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;面向对象的编程思想&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;面向对象的编程思想的终极目标是消除重复代码&lt;/li&gt;
-&lt;li&gt;面向对
+      &lt;p&gt;王海涛&lt;/p&gt;
+&lt;h1 id=&quot;wanght-tedu-cn&quot;&gt;&lt;a href=&quot;#wanght-tedu-cn&quot; class=&quot;headerlink&quot; title=&quot;wanght@tedu.cn&quot;&gt;&lt;/a&gt;wanght@tedu.cn&lt;/h1&gt;&lt;p&gt;java基本语法&lt;br
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>corejava02</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/22/corejava02/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/22/corejava02/</id>
+    <published>2016-04-21T16:13:13.000Z</published>
+    <updated>2016-04-21T16:18:03.276Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;java-源文件&quot;&gt;&lt;a href=&quot;#java-源文件&quot; class=&quot;headerlink&quot; title=&quot;java 源文件&quot;&gt;&lt;/a&gt;java 源文件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;公共类类名，与文件名一致&lt;/p&gt;
+&lt;h2 id=&quot;lt-gt&quot;&gt;&lt;a href=&quot;#lt-gt&quot; class=&quot;headerlink&quot; title=&quot;  &amp;lt;&amp;gt;&quot;&gt;&lt;/a&gt;  &amp;lt;&lt;helloworld.java&gt;&amp;gt;&lt;/helloworld.java&gt;&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;public class HelloWorld {
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;package 包&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)用来分门别类，存放不同的类
+  &lt;/em&gt;)本质是文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;import 导包&lt;/p&gt;
+&lt;p&gt;  用来指明一个类的完整路径，&lt;br&gt;  后面代码中，可以简写类名&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import android.widget.EditText;
+import android.widget.*;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;java-数据类型&quot;&gt;&lt;a href=&quot;#java-数据类型&quot; class=&quot;headerlink&quot; title=&quot;java 数据类型&quot;&gt;&lt;/a&gt;java 数据类型&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;基本类型&lt;/li&gt;
+&lt;li&gt;引用类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;基本类型&quot;&gt;&lt;a href=&quot;#基本类型&quot; class=&quot;headerlink&quot; title=&quot;基本类型&quot;&gt;&lt;/a&gt;基本类型&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;八种&lt;/p&gt;
+&lt;p&gt;byte      1字节,-128到127,-2^7到2^7-1&lt;br&gt;short     2字节,-2^15到2^15-1&lt;br&gt;int       4字节,-2^31到2^31-1&lt;br&gt;long      8字节,-2^63到2^63-1&lt;/p&gt;
+&lt;p&gt;float     4字节,单精度&lt;br&gt;double    8字节,双精度&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;美国工业电气协会浮点数表示规范
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;char      2字节,0 到 2^16-1,0到65535&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;字符、字符的数字编码
+
+char c = &amp;apos;a&amp;apos;;
+char c = &amp;apos;中&amp;apos;;
+char c = 97;
+char c = 20013;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;boolean   1字节&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;真 true     00000001
+假 false    00000000
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;基本类型字面值&quot;&gt;&lt;a href=&quot;#基本类型字面值&quot; class=&quot;headerlink&quot; title=&quot;基本类型字面值&quot;&gt;&lt;/a&gt;基本类型字面值&lt;/h1&gt;&lt;p&gt;  1.整数字面值是 int 类型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int a = 65364
+long a = 9999999999; //错，右侧字面值是int类型，但超出int范围
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2.byte,short,char 比 int 范围小的整数&lt;br&gt;    可以用范围内的值直接赋值&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;byte a = 127;//对,右侧是 byte 类型
+byte a = 128;//错,右侧是 int 类型
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.浮点数是 double 类型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;double a = 3.14;
+float a = 3.14;//错，右侧是 double 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  4.字面值后缀&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;L   long
+    long a = 9999999999L;
+
+F   float
+    flaot a = 3.14F;
+
+D   double
+    double a = 3D;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  5.进制前缀&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0x  16进制
+
+    0xff   255
+
+0   8进制
+
+    0377   255
+
+\u  char类型16进制
+
+    &amp;apos;\u0061&amp;apos;    97      &amp;apos;a&amp;apos;
+    &amp;apos;\u4e2d&amp;apos;    20013   &amp;apos;中&amp;apos;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;基本类型运算规则&quot;&gt;&lt;a href=&quot;#基本类型运算规则&quot; class=&quot;headerlink&quot; title=&quot;基本类型运算规则&quot;&gt;&lt;/a&gt;基本类型运算规则&lt;/h1&gt;&lt;p&gt;  1.运算结果的数据类型&lt;br&gt;    与运算项中范围最大的类型一致&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;3 / 2   得 1
+3d / 2  得 1.5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2.byte,short,char 比 int 范围小的整数&lt;br&gt;    运算时，会先自动转成 int 类型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;byte a = 2;
+byte b = 3;
+byte c = a + b;//错，右侧是int + int，结果是 int
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.整数数运算溢出&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int a = Integer.MAX_VALUE;
+
+a = a + 1;//负数最小值
+
+01111111111111111111111111111111  +  1
+10000000000000000000000000000000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  4.浮点数运算不精确&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2-1.9     得 0.1000000000000009
+4.35*100  得 434.9999999999999994
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  5.浮点数特殊值&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Infinity
+无穷大
+------------------------
+  3.14/0
+  Double.MAX_VALUE*2
+
+NaN
+Not a Number
+------------------------
+  Math.sqrt(-2)
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;基本类型类型转换&quot;&gt;&lt;a href=&quot;#基本类型类型转换&quot; class=&quot;headerlink&quot; title=&quot;基本类型类型转换&quot;&gt;&lt;/a&gt;基本类型类型转换&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;范围小的类型 –&amp;gt; 范围大的类型&lt;/p&gt;
+&lt;p&gt;  byte a = 127;&lt;br&gt;  int b = a;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;01111111
+00000000 00000000 00000000 01111111
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  byte a = -128;&lt;br&gt;  int b = a;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;10000000
+11111111 11111111 11111111 10000000
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;范围大的类型 –&amp;gt; 范围小的类型&lt;/p&gt;
+&lt;p&gt;强制转型&lt;/p&gt;
+&lt;p&gt;  int a = 356;&lt;br&gt;  byte b = (byte) a;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;00000000 00000000 00000001 01100100
+
+01100100 
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;运算符&quot;&gt;&lt;a href=&quot;#运算符&quot; class=&quot;headerlink&quot; title=&quot;运算符&quot;&gt;&lt;/a&gt;运算符&lt;/h1&gt;&lt;p&gt;  +-*/&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;数学运算、 字符串的连接运算&lt;/p&gt;
+&lt;p&gt;%   取余&lt;/p&gt;
+&lt;p&gt; 0 % 3   0&lt;br&gt; 1 % 3   1&lt;br&gt; 2 % 3   2&lt;br&gt; 3 % 3   0&lt;br&gt; 4 % 3   1&lt;br&gt; 5 % 3   2&lt;br&gt; 6 % 3   0&lt;br&gt; 7 % 3   1&lt;br&gt; 8 % 3   2&lt;br&gt; 9 % 3   0&lt;br&gt; 10 % 3  1&lt;/p&gt;
+&lt;p&gt; 判断能否被4整除，是看有没有余数&lt;br&gt; x % 4 是 0&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;= &amp;lt; &amp;lt;= == !=&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; a = 2&lt;br&gt; b = 3&lt;/p&gt;
+&lt;p&gt; a &amp;gt; b    false&lt;br&gt; a &amp;lt; b    true&lt;br&gt; a == b   false&lt;br&gt; a != b   true&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp;&amp;amp;  逻辑与,两侧同时是真结果是真，
+    任意一侧是假结果是假
+    短路与: 左侧是假，右侧被忽略
+
+||  逻辑或,两侧同时是假结果是假，
+    任意一侧是真结果是真
+    短路或: 左侧是真，右侧被忽略
+
+
+!   非,真变假，假变真
+
+    可以做相反的判断
+
+    如果“非a”是真，即a是假
+    if(!a) {
+
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  &amp;amp; 位与:两位同时是1结果是1，任意一位是0结果是0&lt;br&gt;  | 位或:两位同时是0结果是0，任意一位是1结果是1&lt;br&gt;  ^ 异或:不同是1，相同是0；&lt;br&gt;         对同一个值异或两次得到原值；&lt;br&gt;         可以对boolean值求异或&lt;/p&gt;
+&lt;p&gt;  ~ 求反:1变0，0变1&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 带符号右移位,&lt;br&gt;      符号位是0，左侧补0；&lt;br&gt;      符号位是1，左侧补1。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不带符号右移位，&lt;br&gt;      不管符号位是0还是1，左侧补0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  &amp;lt;&amp;lt;  左移位，右侧补0&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;  ++&quot;&gt;&lt;/a&gt;  ++&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;自增、自减
+
+int a = 10;
+//a先自增变成11，打印显示a的原值10
+System.out.println(a++);
+
+int a = 10;
+//a先自增变成11，打印显示a的新值11
+System.out.println(++a);
+
+int a = 10;
+int b = a++;//a是11, b是10
+
+int a = 10;
+a = a++;//a先自增变成11,再被赋a的原值10
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  ? :&lt;br&gt;      三项运算&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 ? 2 : 3
+
+1是真，执行2；
+1是假，执行3。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  =   赋值运算&lt;/p&gt;
+&lt;p&gt;  +=&lt;br&gt;  -+&lt;br&gt;  /=&lt;br&gt;  ^=&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;=&lt;br&gt;  …&lt;br&gt;      a += 3; // a = a+3;&lt;br&gt;      赋值运算与其他运算符联用，&lt;br&gt;      会自动转型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;byte a = 10;
+a = (byte) (a + 3);
+a += 3;
+a += 3.14;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *）运算符优先级&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;不用记优先级高低，
+只需要多加小括号
+
+(1+(2-3))*4/5
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;流程控制语句&quot;&gt;&lt;a href=&quot;#流程控制语句&quot; class=&quot;headerlink&quot; title=&quot;流程控制语句&quot;&gt;&lt;/a&gt;流程控制语句&lt;/h1&gt;&lt;p&gt;  if-else if-else&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if(条件1) {
+    1
+} else if(条件2) {
+    2
+} else if(条件3) {
+    3
+} else {
+    4
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  switch-case-default&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*)只能判断 byte,short,char,int,     enum
+*)当一个case成立，从这个case向后无条件
+  执行每个case,直到结束，或者遇到 break
+  中断执行(跳出switch)
+
+
+switch(变量或表达式) {
+    case 10:
+    case 3:
+
+        break;
+    case 50:
+    case 30:
+    default:
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  for&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for(定义变量; 执行条件; 变量修改) {
+    重复执行的代码
+}
+
+for(int i=1; i&amp;lt;=10; i++) {
+    System.out.println(i);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  while&lt;br&gt;      先判断后执行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while(执行条件) {
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  do-while&lt;br&gt;      先执行后判断&lt;br&gt;      至少执行一次&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;do {
+
+} while(执行条件);
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;循环嵌套&quot;&gt;&lt;a href=&quot;#循环嵌套&quot; class=&quot;headerlink&quot; title=&quot;  循环嵌套&quot;&gt;&lt;/a&gt;  循环嵌套&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;for(int i=1;i&amp;lt;=3;i++) {
+    for(int j=1;j&amp;lt;=2;j++) {
+        i, j
+    }
+}
+
+i     j
+----  ----
+1     1
+1     2
+2     1
+2     2
+3     1
+3     2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  break&lt;/p&gt;
+&lt;h2 id=&quot;continue&quot;&gt;&lt;a href=&quot;#continue&quot; class=&quot;headerlink&quot; title=&quot;  continue&quot;&gt;&lt;/a&gt;  continue&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;break     中断循环、跳出循环 
+
+continue  继续执行循环的下一轮
+
+    for(int i=x; i&amp;lt;=y; i++) {
+        ....
+        ...
+        continue;//跳到 i++ 执行
+        ...
+        ...
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;循环命名&quot;&gt;&lt;a href=&quot;#循环命名&quot; class=&quot;headerlink&quot; title=&quot;  循环命名&quot;&gt;&lt;/a&gt;  循环命名&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;outer:
+for(...) {
+    for(...) {
+        break outer;
+        continue outer;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;用来存放一组数据&lt;/p&gt;
+&lt;p&gt;创建数组&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;1. int[] a = new int[5];
+
+      创建长度是5的数组，
+      每个位置都有默认值0
+
+2. int[] a = {5,3,75,2,5,7,45,3};
+
+3. 如果为 a 变量重新赋一个新的数组
+
+      a = new int[]{2,23,23,6};
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;访问数组&quot;&gt;&lt;a href=&quot;#访问数组&quot; class=&quot;headerlink&quot; title=&quot;  访问数组&quot;&gt;&lt;/a&gt;  访问数组&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;a[0] = 232
+print(a[2])
+int b = a[3] + 2
+a[1]++
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;数组长度属性&quot;&gt;&lt;a href=&quot;#数组长度属性&quot; class=&quot;headerlink&quot; title=&quot;  数组长度属性&quot;&gt;&lt;/a&gt;  数组长度属性&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;a.length
+
+*)最大下标是 a.length-1
+*)长度不可变
+*)数组长度可以是0
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;数组遍历&quot;&gt;&lt;a href=&quot;#数组遍历&quot; class=&quot;headerlink&quot; title=&quot;  数组遍历&quot;&gt;&lt;/a&gt;  数组遍历&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;从 0 位置到 a.length-1 位置，
+依次访问每个位置
+
+for(int i=0; i&amp;lt;a.length; i++) {
+    a[i]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;数组工具类-java-util-Arrays&quot;&gt;&lt;a href=&quot;#数组工具类-java-util-Arrays&quot; class=&quot;headerlink&quot; title=&quot;  数组工具类 java.util.Arrays&quot;&gt;&lt;/a&gt;  数组工具类 java.util.Arrays&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;Arrays.toString(数组)
+  将数组中全部数据，连接成一个字符串
+  &amp;quot;[值1, 值2, 值3]&amp;quot;
+
+Arrays.copyOf(数组, 长度)
+  复制数组，
+  复制成更短或更长的数组
+
+Arrays.sort(数组)
+  对数组排序
+  优化的快速排序算法
+
+Arrays.binarySearch(数组, 目标值)
+  在有序数组中，查找目标值所在的下标位置，
+  找不到，返回负数无意义值
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;二维数组&quot;&gt;&lt;a href=&quot;#二维数组&quot; class=&quot;headerlink&quot; title=&quot;  二维数组&quot;&gt;&lt;/a&gt;  二维数组&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;*)存放数组的数组
+
+创建
+-----------------------------------
+  1.int[][] a = new int[3][2];
+
+      共创建4个数组，
+      外围数组长度是3
+      内部3个数组的长度是2
+
+  2.int[][] a = new int[3][];
+
+      只创建了一个外围数组，长度是3，
+      可以之后再创建数组，放入二维数组
+
+        a[0] = new int[3];
+        a[1] = new int[]{4, 2};
+        a[2] = new int[]{3,1,2,4}
+
+  3.int[][] a = {
+      {1,2,4,2},
+      {6,4},
+      {5,3,7}
+    };
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;二维数组遍历&quot;&gt;&lt;a href=&quot;#二维数组遍历&quot; class=&quot;headerlink&quot; title=&quot;   二维数组遍历&quot;&gt;&lt;/a&gt;   二维数组遍历&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;for(int i=0;i&amp;lt;a.length;i++) {
+    for(int j=0;j&amp;lt;a[i].length;j++) {
+        a[i][j]
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;局部变量、成员变量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;局部变量&lt;br&gt;定义在方法中，或局部代码块中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*)没有默认值，
+  必须手动初始化(第一次赋值,会分配内存空间)
+
+    int a;
+    a = 10;
+    print(a);
+
+*)局部变量作用域，
+  到它定义的代码块结束
+*)局部变量作用域内，
+  不能重复定义
+
+    void a() {
+        int i=10;
+        if(...) {
+            print(i);
+            int j = 100;
+            //int i = 1000;
+        }
+        //print(j);
+        int j = 10000;
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;成员变量&lt;br&gt;定义在类中&lt;/p&gt;
+&lt;p&gt;  *)成员变量有默认值，自动初始化&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;默认值：
+    数字：     0, 0.0
+    boolean：  false
+    引用类型： null
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  &lt;em&gt;)可以被类中所有方法访问
+  &lt;/em&gt;)根据访问范围设置，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;可以在类外面访问
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)局部变量可以与成员变量同名&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;命名的代码块，可以被重复调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;1.返回类型 2.方法名 3.参数列表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有返回值，需要定义它的返回类型&lt;/p&gt;
+&lt;p&gt;  int f() {&lt;/p&gt;
+&lt;p&gt;  }&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;没有返回值，用 void(空)&lt;/p&gt;
+&lt;p&gt;  void f() {&lt;/p&gt;
+&lt;p&gt;  }&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;return&lt;/p&gt;
+&lt;p&gt;  *)有返回值的方法中，向调用位置返回数据&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;return  xxxx;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)void 方法中，表示方法结束，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;返回到调用位置继续执行
+
+  return;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;递归&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)在方法中，调用自身
+  &lt;/em&gt;)一步一步地简化问题，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;简化成最简问题，再
+倒推求出结果
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)一般不同时做多次递归调用，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;否则运算量会急剧增加
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;java-的参数传递&quot;&gt;&lt;a href=&quot;#java-的参数传递&quot; class=&quot;headerlink&quot; title=&quot;java 的参数传递&quot;&gt;&lt;/a&gt;java 的参数传递&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;传值&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)基本类型的值，是值本身
+  &lt;/em&gt;)引用类型的值，是内存地址&lt;/p&gt;
+&lt;p&gt;  void f(int a) {&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = 100;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  }&lt;/p&gt;
+&lt;p&gt;  ….&lt;br&gt;  int a = 10;&lt;br&gt;  f(a);&lt;br&gt;  print(a);&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;  void f(Point a) {&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a.x = 100;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  }&lt;/p&gt;
+&lt;p&gt;  …&lt;br&gt;  Point a = new Point(10, 20);&lt;br&gt;  f(a);&lt;br&gt;  print(a.x);&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;练习&quot;&gt;&lt;a href=&quot;#练习&quot; class=&quot;headerlink&quot; title=&quot;练习&quot;&gt;&lt;/a&gt;练习&lt;/h1&gt;&lt;p&gt;  1.&lt;br&gt;    变量交换&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = 2
+b = 3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2.&lt;br&gt;    自由落体距离&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1/2*g*t*t
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.&lt;br&gt;    牛郎织女相会，需要多少只喜鹊&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;牛郎织女星相距 16.4 光年
+光速 299792458 米/秒
+喜鹊身长 0.46 米
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  4.&lt;br&gt;    判断闰年&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*)能被4整除，但不能被100整除
+*)能被400整除
+
+    2016
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  5.&lt;br&gt;    int四个字节，拆分成4个byte值&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;11100110 00110011 10011100 00010111
+
+11100110
+10110011
+10011100
+00010111
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; r  11100110 10110011 10011100 00000000&lt;/p&gt;
+&lt;p&gt;  6.&lt;br&gt;    求三个数的最大值&lt;/p&gt;
+&lt;p&gt;  7.&lt;br&gt;    个人所得税&lt;/p&gt;
+&lt;p&gt;  8.&lt;br&gt;    产生两个 [0, 1) 随机数字,&lt;br&gt;    如果两个值分布在0.5左右两侧，&lt;br&gt;    显示 true&lt;br&gt;    如果在同侧，显示 false&lt;/p&gt;
+&lt;p&gt;  9.&lt;br&gt;    百分制转五档分制&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;A   [80,100]
+B   [70,80)
+C   [60,70)
+D   [20,60)
+E   [0,20)
+
+switch(分数/10) {
+     case 10:
+     case 9:
+     case 8:
+     case 7:
+     case 6:
+     ...
+     case 0:
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  10.&lt;br&gt;      输入年、月，显示天数&lt;br&gt;      switch(月) {&lt;br&gt;          case 1:&lt;br&gt;          case 3:&lt;br&gt;          case 5:&lt;br&gt;          case 7:&lt;br&gt;          case 8:&lt;br&gt;          case 10:&lt;br&gt;          case 12:&lt;br&gt;            31&lt;br&gt;      }&lt;/p&gt;
+&lt;p&gt;  11.&lt;br&gt;      阶乘&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;5！
+5*4*3*2*1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  12.&lt;br&gt;      约数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;24
+1,2,3,4,6,8,12,24
+
+16
+1,2,4,8,16
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  13.&lt;br&gt;      求π值&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;π/4 = 1/1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11...
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  14.&lt;br&gt;      百元买百鸡&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;公鸡5元1只
+母鸡3元1只
+小鸡1元3只
+
+
+    公鸡从 0 到 20 只
+        母鸡从 0 到 最大数量
+            剩余的钱全部买小鸡
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  15.&lt;br&gt;      求 n 内质数的数量&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  16.&lt;br&gt;      猜数字&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;已经产生了一个[1,1000]内的随机值，
+请猜这个数是几
+
+猜：1
+小
+猜：1000
+大
+猜：2
+小
+猜：999
+对
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  17.&lt;br&gt;      双色球&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;红球：33选6
+蓝球：16选1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  18.&lt;br&gt;      猜字母&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;产生了5个不重复的大写字母
+请猜这五个字母
+
+    UKVBP
+
+猜：PKUCA
+1A2B
+猜：UKPBQ
+3A1B
+猜：BBBBB
+1A4B
+猜：UKVBP
+5A0B
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  19.&lt;br&gt;      插入排序&lt;br&gt;      冒泡排序&lt;/p&gt;
+&lt;p&gt;  20.&lt;br&gt;      二分法查找、折半查找&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;在有序数组中，查找一个值所在的位置
+
+
+    48
+
+    [2, 42, 48, 60, 78, 79, 90]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  21.&lt;br&gt;      递归求阶乘&lt;/p&gt;
+&lt;p&gt;  22.&lt;br&gt;      递归求斐波那契数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 1 2 3 5 8 13 21 34 55 89 144 233 377 ...
+
+1 1 2 3 5
+      a b
+
+b = a+b
+a = b-a
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;作业&quot;&gt;&lt;a href=&quot;#作业&quot; class=&quot;headerlink&quot; title=&quot;作业&quot;&gt;&lt;/a&gt;作业&lt;/h1&gt;&lt;p&gt;  1.&lt;br&gt;    输入框输入半径，&lt;br&gt;    点确定按钮，&lt;br&gt;    求出圆的周长和面积&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2*π*r
+π*r*r
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2.&lt;br&gt;    day0301_闰年&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  一个疗程七遍
+
+输入年号、月号，显示天数
+
+到 6:30 代码狂欢
+    day0301_闰年
+    day0302_int拆分4字节
+    day0303_三个数最大值
+    day0304_个人所得税
+    day0305_随机值
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.&lt;br&gt;    day0408&lt;em&gt;质数,  七遍疗法一个疗程&lt;br&gt;    99乘法表 (java项目)&lt;br&gt;        1   1&lt;em&gt;1=1&lt;br&gt;        2   1&lt;/em&gt;2=2  2&lt;em&gt;2=4&lt;br&gt;        3   1&lt;/em&gt;3=3  2&lt;em&gt;3=6  3&lt;/em&gt;3=9&lt;br&gt;        4&lt;br&gt;        5&lt;br&gt;        6&lt;br&gt;        7&lt;br&gt;        8&lt;br&gt;        9   1&lt;em&gt;9=9  2&lt;/em&gt;9=18 ……..  9*9=81&lt;br&gt;    代码狂欢 6:30&lt;br&gt;        day0402&lt;/em&gt;年月中的天数&lt;br&gt;        day0403&lt;em&gt;for循环&lt;br&gt;        day0404&lt;/em&gt;阶乘&lt;br&gt;        day0405&lt;em&gt;约数&lt;br&gt;        day0406&lt;/em&gt;求π值&lt;br&gt;        day0407&lt;em&gt;百元买百鸡&lt;br&gt;        day0408&lt;/em&gt;质数&lt;/p&gt;
+&lt;p&gt;  4.&lt;br&gt;    输入两个整数，&lt;br&gt;    求最大公约数&lt;br&gt;        16  1,2,4,8,16&lt;br&gt;        24  1,2,3,4,6,8,12,24&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    *)首先获得两个值的最小值
+    *)从最小值向前递减到1
+      判断每个值能否将两个整数
+      同时整除
+
+代码狂欢 6:30
+    day0505_双色球
+    day0506_猜字母
+    day0507_选择排序
+    day0508_冒泡排序
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;java-源文件&quot;&gt;&lt;a href=&quot;#java-源文件&quot; class=&quot;headerlink&quot; title=&quot;java 源文件&quot;&gt;&lt;/a&gt;java 源文件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;公共类类名，与文件名一致&lt;/p&gt;
+&lt;h2 id=&quot;lt-gt&quot;&gt;&lt;a hr
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>corejava03</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/22/corejava03/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/22/corejava03/</id>
+    <published>2016-04-21T16:12:38.000Z</published>
+    <updated>2016-04-21T16:18:34.411Z</updated>
+    
+    <content type="html">&lt;p&gt;基本类型&lt;br&gt;运算符 +-*/%&amp;gt; == != &amp;amp;&amp;amp;||! &amp;amp;|^~&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; &amp;lt;&amp;lt; ++– ?: = +=&lt;br&gt;流程控制&lt;br&gt;数组&lt;/p&gt;
+&lt;p&gt;=====================================&lt;/p&gt;
+&lt;h1 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;人为抽象的一种编程模型&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;复杂问题拆分成一个一个的小问题，&lt;br&gt;通过解决每个小问题，来解决复杂问题&lt;/p&gt;
+&lt;p&gt;类&lt;br&gt;对象、实例&lt;br&gt;引用&lt;br&gt;构造方法&lt;br&gt;this&lt;br&gt;方法重载&lt;br&gt;继承&lt;br&gt;方法重写&lt;br&gt;super&lt;br&gt;多态&lt;br&gt;instanceof&lt;br&gt;抽象类&lt;br&gt;final&lt;br&gt;static&lt;br&gt;访问控制符&lt;br&gt;接口&lt;br&gt;内部类&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;类&quot;&gt;&lt;a href=&quot;#类&quot; class=&quot;headerlink&quot; title=&quot;类&quot;&gt;&lt;/a&gt;类&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;理解成“图纸”&lt;/li&gt;
+&lt;li&gt;对事物、算法、逻辑、概念的抽象&lt;/li&gt;
+&lt;li&gt;将相关的数据、运算代码，&lt;br&gt;封装在一个类组件中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;对象、实例&quot;&gt;&lt;a href=&quot;#对象、实例&quot; class=&quot;headerlink&quot; title=&quot;对象、实例&quot;&gt;&lt;/a&gt;对象、实例&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;理解成从“图纸”生产出的具体“物体”&lt;/li&gt;
+&lt;li&gt;每个对象，占用独立的的内存空间，&lt;br&gt;保存各自的属性数据&lt;/li&gt;
+&lt;li&gt;每个对象，可以独立控制它执行&lt;br&gt;指定的方法代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;理解成“遥控器”&lt;/li&gt;
+&lt;li&gt;引用变量中，保存一个对象的内存地址&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过引用变量，可以找到&lt;br&gt;一个对象的内存空间，&lt;br&gt;访问它的属性，或调用它的方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;引用变量的特殊值 null&lt;/p&gt;
+&lt;p&gt;  *）null 空&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;不引用任何对象的内存地址
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;构造方法&quot;&gt;&lt;a href=&quot;#构造方法&quot; class=&quot;headerlink&quot; title=&quot;构造方法&quot;&gt;&lt;/a&gt;构造方法&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;新建实例时，执行的特殊方法&lt;/p&gt;
+&lt;p&gt;  new Soldier()&lt;br&gt;  new Car()&lt;br&gt;  new Dog()&lt;br&gt;  new Point()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一个类，必须有构造方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果自己不编写构造方法，&lt;br&gt;编译器会添加默认构造方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class A {
+    public A() {
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;构造方法重载（不同参数）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class A {
+    public A(int i) {
+        ...
+    }
+    public A(int i,double d) {
+        ...
+    }
+    public A(int i,double d,String s) {
+        ...
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;构造方法的作用： 不知道&lt;/p&gt;
+&lt;p&gt;  *)常用来为成员变量赋值&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;this&quot;&gt;&lt;a href=&quot;#this&quot; class=&quot;headerlink&quot; title=&quot;this&quot;&gt;&lt;/a&gt;this&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;两种用法：引用当前对象、构造方法间调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;引用当前对象&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;this保存当前对象的内存地址 
+可以用 this 调用当前对象的成员
+
+  this.name
+  this.f()
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;构造方法之间调用 this(…)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*)减少代码重复
+*)一般从参数少的方法，
+  调用参数多的方法，
+  多个参数集中在一个方法中处理
+
+*)必须是首行代码
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;方法重载&quot;&gt;&lt;a href=&quot;#方法重载&quot; class=&quot;headerlink&quot; title=&quot;方法重载&quot;&gt;&lt;/a&gt;方法重载&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;同名不同参&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;继承&quot;&gt;&lt;a href=&quot;#继承&quot; class=&quot;headerlink&quot; title=&quot;继承&quot;&gt;&lt;/a&gt;继承&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;作用：代码重用、代码复用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;单继承：&lt;br&gt;  &lt;em&gt;)一个类只能继承一个父类
+  &lt;/em&gt;)一个父类可以有多个子类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;不继承构造方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;不继承不可见的成员&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;方法重写 Override&lt;/p&gt;
+&lt;p&gt;  *)继承的方法，在子类中重新编写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建子类对象&lt;/p&gt;
+&lt;p&gt;  1)先创建父类对象&lt;br&gt;  2)再创建子类对象&lt;/p&gt;
+&lt;p&gt;  *)两个对象绑定在一起，作为一个子类对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;构造方法&lt;/p&gt;
+&lt;p&gt;  1)创建父类对象时执行父类构造方法&lt;br&gt;  2)创建子类对象时执行子类构造方法&lt;/p&gt;
+&lt;p&gt;  *)默认执行父类无参构造方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;super()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)可以手动调用父类有参构造方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;super(参数)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;super 两种用法&lt;/p&gt;
+&lt;p&gt;  *)重写方法时，调用父类同一个方法的代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;super.toString()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)手动调用父类构造方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;super()     默认
+super(参数) 手动
+
+*)必须是首行代码
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;多态&quot;&gt;&lt;a href=&quot;#多态&quot; class=&quot;headerlink&quot; title=&quot;多态&quot;&gt;&lt;/a&gt;多态&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;作用： 一致的类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;类型转换&lt;/p&gt;
+&lt;p&gt;  *) 向上转型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;子类对象，转换成父类型，
+被当做父类型处理
+
+ *)向上转型之后，只能调用父类中定义的
+   通用成员，不能调用子类特有的成员
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *) 向下转型&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;已经转为父类型的子类对象，
+再转回成子类型
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;instanceof&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;) 判断对象的类型
+  &lt;/em&gt;) 对真实类型及其父类型判断，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;都返回 true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  Shape s = new Line();&lt;/p&gt;
+&lt;p&gt;  s instanceof Line   true&lt;br&gt;  s instanceof Shape  true&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;抽象类&quot;&gt;&lt;a href=&quot;#抽象类&quot; class=&quot;headerlink&quot; title=&quot;抽象类&quot;&gt;&lt;/a&gt;抽象类&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;作用：&lt;br&gt;  &lt;em&gt;)为子类提供通用代码
+  &lt;/em&gt;)为子类提供通用方法的定义      &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;半成品类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;不能创建实例&lt;/li&gt;
+&lt;li&gt;只能创建子类的实例&lt;/li&gt;
+&lt;li&gt;包含抽象方法的类，必须是抽象类&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;抽象方法调用&lt;/p&gt;
+&lt;p&gt;  执行子类中实现的方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;final&quot;&gt;&lt;a href=&quot;#final&quot; class=&quot;headerlink&quot; title=&quot;final&quot;&gt;&lt;/a&gt;final&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;修饰变量、方法、类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;变量&lt;/p&gt;
+&lt;p&gt;  *)变量的值不可变，称为“常量”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;final int a = 10;
+//a = 11;//错
+
+final Point a = new Point(3, 4);
+a.x = 30;//对
+//a = new Point(4, 5);//错
+//a = null;//错
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;方法&lt;/p&gt;
+&lt;p&gt;  在子类中不能重写这个方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;类&lt;/p&gt;
+&lt;p&gt;  没有子类，不能被继承&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;static&quot;&gt;&lt;a href=&quot;#static&quot; class=&quot;headerlink&quot; title=&quot;static&quot;&gt;&lt;/a&gt;static&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;静态&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;静态成员属于类，而不属于实例&lt;/p&gt;
+&lt;p&gt;  class Soldier {&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int id;
+static int count;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  }&lt;/p&gt;
+&lt;p&gt;  Soldier s1 = new Soldier();&lt;br&gt;  Soldier s2 = new Soldier();&lt;br&gt;  s1.id = 9527;&lt;br&gt;  s2.id = 9528;&lt;/p&gt;
+&lt;p&gt;  s1.count = 1;&lt;br&gt;  s2.count = 2;&lt;/p&gt;
+&lt;p&gt;  print(s1.id);&lt;br&gt;  print(s1.count);&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;访问静态成员，一般使用类名调用&lt;/p&gt;
+&lt;p&gt;  Soldier.count = 1;&lt;br&gt;  Soldier.count = 2;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;什么时候使用静态&lt;/p&gt;
+&lt;p&gt;  *)使用原则： 能不用就不用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;静态是“非面向对象”的语法
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)使用场景：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;*)共享的数据
+*)工具方法
+
+    Math.sqrt()
+    Math.random()
+    Arrays.toString()
+    Integer.parseInt()
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;静态初始化块&lt;/p&gt;
+&lt;p&gt;  class A {&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;static {
+    类加载时，只执行一次
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  }&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;常量&quot;&gt;&lt;a href=&quot;#常量&quot; class=&quot;headerlink&quot; title=&quot;常量&quot;&gt;&lt;/a&gt;常量&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;static final&lt;/p&gt;
+&lt;p&gt;  final   不可变&lt;br&gt;  static  只有一个内存地址，节省内存&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;常量名习惯使用全大写，单词之间加下划线&lt;/p&gt;
+&lt;p&gt;  static final int MAX_VALUE = 32;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;对象创建过程&quot;&gt;&lt;a href=&quot;#对象创建过程&quot; class=&quot;headerlink&quot; title=&quot;对象创建过程&quot;&gt;&lt;/a&gt;对象创建过程&lt;/h1&gt;&lt;p&gt;  class A {&lt;br&gt;      int v1 = 1;           //实例变量,非静态&lt;br&gt;      static int v2 = 2;    //类变量,静态&lt;br&gt;      static {&lt;br&gt;          …&lt;br&gt;      }&lt;br&gt;      public A() {&lt;br&gt;          …&lt;br&gt;      }&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;  }&quot;&gt;&lt;/a&gt;  }&lt;/h2&gt;&lt;p&gt;  class B extends A{&lt;br&gt;      int v3 = 3;&lt;br&gt;      static int v4 = 4;&lt;br&gt;      static {&lt;br&gt;          …&lt;br&gt;      }&lt;br&gt;      public B() {&lt;br&gt;          …&lt;br&gt;      }&lt;/p&gt;
+&lt;h2 id=&quot;-1&quot;&gt;&lt;a href=&quot;#-1&quot; class=&quot;headerlink&quot; title=&quot;  }&quot;&gt;&lt;/a&gt;  }&lt;/h2&gt;&lt;p&gt;  B b = new B();&lt;/p&gt;
+&lt;h2 id=&quot;创建过程：&quot;&gt;&lt;a href=&quot;#创建过程：&quot; class=&quot;headerlink&quot; title=&quot;  创建过程：&quot;&gt;&lt;/a&gt;  创建过程：&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;第一次用到 A 类和 B 类
+  1.加载父类,为父类静态变量分配内存
+  2.加载子类,为子类静态变量分配内存
+  3.执行父类静态变量赋值运算和静态初始化块
+  4.执行子类静态变量赋值运算和静态初始化块
+
+再次用到 A 类和 B 类
+  5.为父类对象分配内存，为非静态变量分配内存
+  6.为子类对象分配内存，为非静态变量分配内存
+  7.执行父类非静态变量赋值运算
+  8.执行父类构造方法
+  9.执行子类非静态变量赋值运算
+  10.执行子类构造方法
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;访问控制符&quot;&gt;&lt;a href=&quot;#访问控制符&quot; class=&quot;headerlink&quot; title=&quot;访问控制符&quot;&gt;&lt;/a&gt;访问控制符&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;控制类或类中的成员的访问范围&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;类    包    子类    任意
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;public      O     O     O       O&lt;br&gt;protected   O     O     O&lt;br&gt;[default]   O     O&lt;br&gt;private     O&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;选择原则：尽量小范围访问&lt;/p&gt;
+&lt;p&gt;  public 是与其他开发者的契约，&lt;br&gt;  约定公开的东西会保持稳定不变&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;接口&quot;&gt;&lt;a href=&quot;#接口&quot; class=&quot;headerlink&quot; title=&quot;接口&quot;&gt;&lt;/a&gt;接口&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;作用：结构设计工具，用来解耦合&lt;/li&gt;
+&lt;li&gt;是极端的抽象类&lt;/li&gt;
+&lt;li&gt;用 interface 代替了 class 关键字&lt;/li&gt;
+&lt;li&gt;用 implements 代替了 extends 关键字&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在接口中只能定义：&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)公共的常量
+  &lt;/em&gt;)公共的抽象方法&lt;br&gt;  *)公共的内部类、内部接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一个类可以同时实现多个接口&lt;/p&gt;
+&lt;p&gt;  class A implements B,C,D {&lt;br&gt;  }&lt;/p&gt;
+&lt;p&gt;  class A extends B implements C,D,E {&lt;br&gt;  }&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;接口之间继承&lt;/p&gt;
+&lt;p&gt;  interface A extends B,C,D {&lt;br&gt;  }&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;内部类&quot;&gt;&lt;a href=&quot;#内部类&quot; class=&quot;headerlink&quot; title=&quot;内部类&quot;&gt;&lt;/a&gt;内部类&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;定义在类内部，或局部代码块内部的类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;非静态内部类&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class A {
+    class Inner {
+    }
+}
+
+A a = new A();
+A.Inner i = a.new Inner();        
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;静态内部类&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class A {
+    static class Inner {
+    }
+}
+
+A.Inner i = new A.Inner();
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;局部内部类&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class A {
+    Weapon a() {
+        class Inner implements Weapon {
+        }
+
+        Inner i = new Inner();
+        return i;
+    }
+}
+
+A a = new A();
+Weapon w = a.a();
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;匿名内部类&lt;/p&gt;
+&lt;p&gt;  Weapon w = new Weapon() {…};&lt;/p&gt;
+&lt;p&gt;  &lt;em&gt;)大括号是匿名类
+  &lt;/em&gt;)new 新建匿名类的实例&lt;br&gt;  *)继承 Weapon 作为 Weapon 的子类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;练习&quot;&gt;&lt;a href=&quot;#练习&quot; class=&quot;headerlink&quot; title=&quot;练习&quot;&gt;&lt;/a&gt;练习&lt;/h1&gt;&lt;p&gt;  1.&lt;br&gt;    定义士兵类&lt;br&gt;    tarena.day0605.Soldier&lt;br&gt;    属性：&lt;br&gt;        int id&lt;br&gt;        int blood&lt;br&gt;    方法：&lt;br&gt;        go()&lt;br&gt;        attack()&lt;/p&gt;
+&lt;p&gt;  2.&lt;br&gt;    手电筒&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;定义“手电筒”类
+tarena.day0701.FlashLight
+属性：
+    int color
+    boolean on
+方法：
+    turnOn()
+    turnOff()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.&lt;br&gt;    汽车&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tarena.day0702.Car
+属性：
+    String brand
+    String color
+    int speed
+方法：
+    go()
+    stop()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  4.&lt;br&gt;    电子宠物&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tarena.day0703.Dog
+属性：
+    String name
+    int hungry
+    int happy
+方法：
+    feed()
+    play()
+    punish()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  5.&lt;br&gt;    平面坐标点&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tarena.day0704.Point
+属性：
+    int x
+    int y
+方法：
+    toString() 成员变量的值连接成字符串
+    distance() 距原点的距离
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  6.&lt;br&gt;    学生&lt;br&gt;    tarena.day0705.Student&lt;br&gt;    属性：&lt;br&gt;        int id&lt;br&gt;        String name&lt;br&gt;        String gender&lt;br&gt;        int age&lt;br&gt;    构造方法：&lt;br&gt;        Student()&lt;br&gt;        Student(id,name)&lt;br&gt;        Student(id,name,gender)&lt;br&gt;        Student(id,name,gender,age)&lt;br&gt;    方法：&lt;br&gt;        toString()&lt;br&gt;          四个成员变量的值连接成字符串&lt;/p&gt;
+&lt;p&gt;  7.&lt;br&gt;    Person&lt;br&gt;      |- Student&lt;br&gt;      |- Employee&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Person
+  属性：
+      String name
+      String gender
+      int age
+  构造方法：
+      Person()
+      Person(name,gender,age)
+  方法：
+      toString()
+        属性的值连接成字符串
+
+Student
+  属性：
+      String school
+Employee
+  属性：
+      String company
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  8.&lt;br&gt;    二维点三维点&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Point
+  |- Point3D
+
+Point
+  属性：
+      int x
+      int y
+  构造方法：
+      Point(x, y)
+  方法：
+      toString()
+      distance()
+
+Point3D
+  属性：
+      int z
+  构造方法：
+      Point(x,y,z)
+  方法：
+      toString()
+      distance()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  9.&lt;br&gt;    电子宠物&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Pet
+  |- Dog
+  |- Cat
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  10.&lt;br&gt;    图形形状&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Shape
+  |- Line
+  |- Circle
+  |- Square
+
+Shape
+  方法：
+    draw()
+    clean()
+
+子类中重写 draw() 方法
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  11.&lt;br&gt;      员工工资、奖金&lt;br&gt;      Employee&lt;br&gt;        |- Programmer&lt;br&gt;        |- Manager&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Employee
+  gongZi()    抽象
+  jiangJin()  抽象
+  zongHe()
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;作业&quot;&gt;&lt;a href=&quot;#作业&quot; class=&quot;headerlink&quot; title=&quot;作业&quot;&gt;&lt;/a&gt;作业&lt;/h1&gt;&lt;p&gt;  1.&lt;br&gt;    day0508&lt;em&gt;冒泡排序&lt;br&gt;    day0601&lt;/em&gt;二分法查找&lt;br&gt;      七遍疗法之第一、二、三遍&lt;br&gt;      运算逻辑，回看小电影&lt;br&gt;    选择排序&lt;br&gt;                            min&lt;br&gt;        11, 28, 59, 63, 85, 82, 84, 88, 97&lt;br&gt;                        i&lt;br&gt;        在 i 到末尾范围内，找到最小值的位置，&lt;br&gt;        与 i 位置交换&lt;br&gt;        找到最小值的位置:&lt;br&gt;            参考 day0504&lt;em&gt;数组&lt;br&gt;            可以先假设 i 位置最小&lt;br&gt;    代码狂欢 6:30&lt;br&gt;        day0508&lt;/em&gt;冒泡排序&lt;br&gt;        day0601&lt;em&gt;二分法查找&lt;br&gt;        day0603&lt;/em&gt;递归求阶乘&lt;br&gt;        day0605_士兵，完成 f4()f5()f6()&lt;/p&gt;
+&lt;p&gt;  2.&lt;br&gt;    day0508&lt;em&gt;冒泡排序&lt;br&gt;    day0601&lt;/em&gt;二分法查找&lt;br&gt;      七遍疗法之第四遍&lt;br&gt;      运算逻辑，回看小电影&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;代码狂欢 6:30 ：
+  day0701_FlashLight
+  day0703_电子宠物
+  day0704_坐标点
+  day0705_学生
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.&lt;br&gt;    day0508&lt;em&gt;冒泡排序&lt;br&gt;    day0601&lt;/em&gt;二分法查找&lt;br&gt;      七遍疗法之第五遍&lt;br&gt;      运算逻辑，回看小电影&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;代码狂欢 6:30 ：
+  day0703_电子宠物
+  day0801_人类
+  day0802_二维点三维点
+  day0803_图形形状
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  4.&lt;br&gt;    day0508&lt;em&gt;冒泡排序&lt;br&gt;    day0601&lt;/em&gt;二分法查找&lt;br&gt;      七遍疗法之第六遍&lt;br&gt;      运算逻辑，回看小电影&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;代码狂欢 6:30 ：
+  day0905_变形金刚
+    1) 定义 Weapon 接口
+    2) 三个实现子类
+    3) Transformer
+    4) MainActivity
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  5.&lt;br&gt;    day0508&lt;em&gt;冒泡排序&lt;br&gt;    day0601&lt;/em&gt;二分法查找&lt;br&gt;      七遍疗法之第七遍&lt;br&gt;      运算逻辑，回看小电影&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;day0905_变形金刚
+  七遍疗法之第一遍
+
+代码狂欢 6:30 ：
+  day1002_窗口启动
+  day1003_各种监听器
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  6.&lt;br&gt;    day0905_变形金刚&lt;br&gt;      七遍疗法之第二遍&lt;/p&gt;
+&lt;p&gt;  7.&lt;br&gt;    day0905_变形金刚&lt;br&gt;      七遍疗法之第三、四遍&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基本类型&lt;br&gt;运算符 +-*/%&amp;gt; == != &amp;amp;&amp;amp;||! &amp;amp;|^~&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; &amp;lt;&amp;lt; ++– ?: = +=&lt;br&gt;流程控制&lt;br&gt;数组&lt;/p&gt;
+&lt;p&gt;=======================
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>corejava04</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/22/corejava04/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/22/corejava04/</id>
+    <published>2016-04-21T16:10:26.000Z</published>
+    <updated>2016-04-21T16:16:19.445Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;API&quot;&gt;&lt;a href=&quot;#API&quot; class=&quot;headerlink&quot; title=&quot;API&quot;&gt;&lt;/a&gt;API&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Application Programming Interface&lt;br&gt;应用编程接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;一切可以调用的东西&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;java-lang-包&quot;&gt;&lt;a href=&quot;#java-lang-包&quot; class=&quot;headerlink&quot; title=&quot;java.lang 包&quot;&gt;&lt;/a&gt;java.lang 包&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;lang -  language&lt;/li&gt;
+&lt;li&gt;java 语言包&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;自动导入&lt;/p&gt;
+&lt;p&gt;  String&lt;br&gt;  System&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;java-lang-Object&quot;&gt;&lt;a href=&quot;#java-lang-Object&quot; class=&quot;headerlink&quot; title=&quot;java.lang.Object&quot;&gt;&lt;/a&gt;java.lang.Object&lt;/h1&gt;&lt;p&gt;java.lang.String&lt;br&gt;java.lang.StringBuilder&lt;br&gt;java.lang.StringBuffer&lt;br&gt;正则表达式&lt;br&gt;java.util.regex.Pattern&lt;/p&gt;
+&lt;h1 id=&quot;java-util-regex-Matcher&quot;&gt;&lt;a href=&quot;#java-util-regex-Matcher&quot; class=&quot;headerlink&quot; title=&quot;java.util.regex.Matcher&quot;&gt;&lt;/a&gt;java.util.regex.Matcher&lt;/h1&gt;&lt;p&gt;基本类型包装类&lt;br&gt;java.lang.Number&lt;br&gt;java.math.BigDecimal&lt;br&gt;java.math.BigInteger&lt;br&gt;java.text.DecimalFormat&lt;/p&gt;
+&lt;h1 id=&quot;java-lang-Math&quot;&gt;&lt;a href=&quot;#java-lang-Math&quot; class=&quot;headerlink&quot; title=&quot;java.lang.Math&quot;&gt;&lt;/a&gt;java.lang.Math&lt;/h1&gt;&lt;p&gt;java.util.Date&lt;br&gt;java.text.SimpleDateFormat&lt;br&gt;java.util.Calendar&lt;/p&gt;
+&lt;h1 id=&quot;java-util-GregorianCalendar&quot;&gt;&lt;a href=&quot;#java-util-GregorianCalendar&quot; class=&quot;headerlink&quot; title=&quot;java.util.GregorianCalendar&quot;&gt;&lt;/a&gt;java.util.GregorianCalendar&lt;/h1&gt;&lt;h1 id=&quot;Object&quot;&gt;&lt;a href=&quot;#Object&quot; class=&quot;headerlink&quot; title=&quot;Object&quot;&gt;&lt;/a&gt;Object&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;java 所有类的顶层父类&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果不继承其他类，默认继承 Object&lt;/p&gt;
+&lt;p&gt;  class A /&lt;em&gt;extends Object&lt;/em&gt;/ {&lt;/p&gt;
+&lt;p&gt;  }&lt;/p&gt;
+&lt;p&gt;方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;toString()
+
+  获得对象的字符串表示
+  Object默认实现是：
+
+    &amp;quot;tarena.day1301.Point@9a4bf81&amp;quot;
+    类名@内存地址
+
+  如果需要，可以在子类中重写这个方法
+
+equals(Object obj)
+
+  当前对象与参数对象 obj 比较是否相等
+  Object 中默认实现是：
+
+      比较内存地址
+      this == obj
+
+  如果需要，可以重写这个方法
+
+hashCode()
+  获得对象的哈希值
+  Object中默认实现是： 
+
+    用对象的内存地址作为哈希值
+
+  如果需要，在子类中重写 hashCode()
+  使用属性计算产生哈希值 
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;String&quot;&gt;&lt;a href=&quot;#String&quot; class=&quot;headerlink&quot; title=&quot;String&quot;&gt;&lt;/a&gt;String&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;封装 char[] 数组的对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;字符串的字面值 “abc”&lt;/p&gt;
+&lt;p&gt;  *)第一次用到一个字面值时，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;在“字符串常量池”中新分配内存
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  *)再次用到相同的字面值时，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;直接访问“常量池”中已经存在的对象
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;字符串不可变&lt;/p&gt;
+&lt;p&gt;  *)字符串加号连接效率低，&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;每次连接都会新建字符串对象
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  String s1 = “abc”;&lt;br&gt;  String s2 = “def”;&lt;br&gt;  String s3 = “ghi”;&lt;br&gt;  String s4 = s1 + s2 + s3;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;创建对象&quot;&gt;&lt;a href=&quot;#创建对象&quot; class=&quot;headerlink&quot; title=&quot;  创建对象&quot;&gt;&lt;/a&gt;  创建对象&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1.char[] a = {&amp;apos;h&amp;apos;,&amp;apos;e&amp;apos;,&amp;apos;l&amp;apos;,&amp;apos;l&amp;apos;,&amp;apos;o&amp;apos;};
+  String s = new String(a);
+
+2.第一种方式的语法简化
+  String s = &amp;quot;hello&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;  方法&quot;&gt;&lt;/a&gt;  方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;charAt(int index) 
+
+    s = &amp;quot;abc&amp;quot;;        
+    char c = s.charAt(0);
+
+    toUpperCase() 
+
+    s = s.toUpperCase()
+    print(s)
+
+    toLowerCase()
+    length()
+
+    compareTo(String anotherString) 
+    compareToIgnoreCase(String str) 忽略大小写
+            与另一字符串按编码表顺序比较大小
+
+            当前字符串大，返回正数
+            当前字符串小，返回负数
+            大小相同，返回0
+
+    startsWith(String s)    
+
+        s = &amp;quot;http://........&amp;quot;
+        boolean b = s.startsWith(&amp;quot;http://&amp;quot;)
+
+    endsWith(String suffix) 
+            是否以指定的子串开头或结尾
+    equals(Object anObject) 
+    equalsIgnoreCase(String anotherString) 忽略大小写
+            比较字符串内容是否相同
+    indexOf(String s) 
+
+        s = &amp;quot;abc abc abc&amp;quot;;
+        int index = s.lastIndexOf(&amp;quot;xxxx&amp;quot;);
+
+    indexOf(String s, int fromIndex) 从指定位置向后寻找
+            获得指定子串的位置，不存在，返回 -1
+    lastIndexOf(String s) 
+            从后向前寻找子串的位置
+    replace(char oldChar, char newChar) 
+            将指定的字符替换为新的字符
+
+
+            s = &amp;quot;abc abc abc&amp;quot;;
+            String s2 = s.replace(&amp;apos;a&amp;apos;, &amp;apos;-&amp;apos;);
+            System.out.println(s2);
+
+    substring(int a) 从 a 位置直到结束
+
+        s = &amp;quot;abcdefg&amp;quot;;
+        Strring s2 = s.substring(3, 5);
+        System.out.println(s2);
+
+    substring(int a, int b) 
+            获得 [a, b) 位置范围的子串
+    trim() 
+            去除两端空白字符
+
+            s = &amp;quot;   a  bc   &amp;quot;;
+            s = s.trim();
+            System.out.println(s);
+
+    getBytes()                    将 unicode 转为默认编码格式的字节数组
+    getBytes(字符编码)    将 unicode 转为指定编码格式的字节数组
+    String.valueOf(数据)
+            将任何数据转为字符串
+
+  正则表达式相关方法
+  ----------------------------------
+      matches(正则表达式)
+
+          判断当前字符串，能否与正则表达式匹配
+
+      replaceAll(正则表达式, 子串)
+
+          将找到的匹配子串，替换为新的子串
+
+      split(正则表达式)
+
+          用匹配的子串，拆分字符串
+          abc,def,ghi,jkl
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;StringBuilder&lt;/p&gt;
+&lt;h1 id=&quot;StringBuffer&quot;&gt;&lt;a href=&quot;#StringBuffer&quot; class=&quot;headerlink&quot; title=&quot;StringBuffer&quot;&gt;&lt;/a&gt;StringBuffer&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;可变的字符序列&lt;/li&gt;
+&lt;li&gt;封装 char[] 数组&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;经常用来代替 String 做高效率字符串连接&lt;/p&gt;
+&lt;p&gt;  sb.append(“abc”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;StringBuilder   线程不安全,效率高&lt;br&gt;StringBuffer    线程安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;创建对象-1&quot;&gt;&lt;a href=&quot;#创建对象-1&quot; class=&quot;headerlink&quot; title=&quot;  创建对象&quot;&gt;&lt;/a&gt;  创建对象&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1.StringBuilder sb = new StringBuilder();
+
+    空串
+
+2.StringBuilder sb = new StringBuilder(&amp;quot;abc&amp;quot;);
+
+    abc
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;方法-1&quot;&gt;&lt;a href=&quot;#方法-1&quot; class=&quot;headerlink&quot; title=&quot;  方法&quot;&gt;&lt;/a&gt;  方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;append()
+            在字符序列末尾，追加字符
+            高效的字符串连接
+    delete(int start, int end) 
+            删除 [start, end) 
+    deleteCharAt(int index) 
+            删除单个字符
+    insert(int index, 子串)
+            在 index 位置，插入一个子串
+    replace(int start, int end, String str) 
+            将 [start, end) 替换为指定字符串 str
+    reverse() 
+            翻转
+    setCharAt(int index, char ch) 
+            将 index 位置替换为字符 ch
+    toString()
+            转为 String 类型
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;正则表达式-Regex&quot;&gt;&lt;a href=&quot;#正则表达式-Regex&quot; class=&quot;headerlink&quot; title=&quot;正则表达式 Regex&quot;&gt;&lt;/a&gt;正则表达式 Regex&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;正确的字符串格式规则&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;百度“正则表达式大全”&lt;/p&gt;
+&lt;p&gt;正则表达式        匹配的字符串&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;  k                 k&lt;br&gt;  abc               abc&lt;br&gt;  [abc]             a, b, c&lt;br&gt;  [a-z]             a, z, e, u&lt;br&gt;  [a-zA-Z&lt;em&gt;0-9]      a, A, z, Z, 0, 9, &lt;/em&gt;&lt;br&gt;  [^a-zA-Z]         9, _, $, 中&lt;br&gt;  \d                数字&lt;br&gt;  \D                排除数字&lt;br&gt;  \w                单词字符[a-zA-Z_0-9]&lt;br&gt;  \W                排除单词字符[^a-zA-Z_0-9]&lt;br&gt;  \s                空白字符&lt;br&gt;  \S                排除空白字符&lt;br&gt;  .                 任意字符&lt;br&gt;  [\u4e00-\u9fa5]   中文范围&lt;/p&gt;
+&lt;p&gt;  [abc]?            0或1个  a,,b,c&lt;br&gt;  [abc]?[123]       a1,a2,a3,b1,b2,3,1,2,c3&lt;/p&gt;
+&lt;p&gt;  [abc]*            0到多个  a,,aaa,bbb,abc,cba,abcabcabcabcacbccabccac&lt;br&gt;  [abc]+            1到多个&lt;br&gt;  [abc]{3}          3个, aaa,abc,cba,bbc,cca,cba&lt;br&gt;  [abc]{3,5}        3到5个, abc,abca,abcab&lt;br&gt;  [abc]{3,}         3到多个, abc,abca,abcabcabcabcabcabcacbc&lt;/p&gt;
+&lt;p&gt;  |                 或&lt;/p&gt;
+&lt;p&gt;java.util.regex.Pattern&lt;/p&gt;
+&lt;h1 id=&quot;java-util-regex-Matcher-1&quot;&gt;&lt;a href=&quot;#java-util-regex-Matcher-1&quot; class=&quot;headerlink&quot; title=&quot;java.util.regex.Matcher&quot;&gt;&lt;/a&gt;java.util.regex.Matcher&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Pattern 封装正则表达式&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Matcher 封装正则表达式和要匹配的字符串&lt;/p&gt;
+&lt;p&gt;创建对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;Pattern p = Pattern.compile(正则表达式);
+Matcher m = p.matcher(要匹配的字符串);
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;Matcher-方法&quot;&gt;&lt;a href=&quot;#Matcher-方法&quot; class=&quot;headerlink&quot; title=&quot;  Matcher 方法&quot;&gt;&lt;/a&gt;  Matcher 方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;find()
+  向后查找下一段匹配的子串
+  返回 boolean 值，表示是否找到下一段
+
+find(int from)
+  从指定位置向后找
+
+group()
+  获取刚刚找到的子串
+
+start()
+end()
+  获取刚刚找到的子串的起始和结束位置
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;基本类型包装类&quot;&gt;&lt;a href=&quot;#基本类型包装类&quot; class=&quot;headerlink&quot; title=&quot;基本类型包装类&quot;&gt;&lt;/a&gt;基本类型包装类&lt;/h1&gt;&lt;p&gt;  byte      Byte&lt;br&gt;  short     Short&lt;br&gt;  int       Integer&lt;br&gt;  long      Long&lt;br&gt;  float     Float&lt;br&gt;  double    Double&lt;br&gt;  char      Character&lt;br&gt;  boolean   Boolean&lt;/p&gt;
+&lt;h2 id=&quot;java-lang-Number&quot;&gt;&lt;a href=&quot;#java-lang-Number&quot; class=&quot;headerlink&quot; title=&quot;  java.lang.Number&quot;&gt;&lt;/a&gt;  java.lang.Number&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;*)数字包装类的抽象父类
+*)子类：
+    Byte
+    Short
+    Integer
+    Long
+    Float
+    Double
+
+    BigDecimal
+    BigInteger
+
+方法
+-----------------------------
+  取值方法
+  byteValue()
+  shortValue()
+  intValue()
+  longValue()
+  floatValue()
+  doubleValue()
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;Integer&quot;&gt;&lt;a href=&quot;#Integer&quot; class=&quot;headerlink&quot; title=&quot;  Integer&quot;&gt;&lt;/a&gt;  Integer&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;创建对象
+-----------------------------
+  1.Integer i = new Integer(23);
+
+  2.Integer i = Integer.valueOf(23);
+
+      Integer类中存在封装-128到127
+      的缓存对象，
+      范围内的值，直接访问存在的缓存对象，
+      范围外的值，是新建对象
+
+方法
+-----------------------------
+  *)从父类继承的6个取值方法
+  *)字符串解析成数字
+
+      Integer.parseInt(&amp;quot;255&amp;quot;)             255
+      Integer.parseInt(&amp;quot;11111111&amp;quot;,2)      255
+      Integer.parseInt(&amp;quot;377&amp;quot;,8)           255
+      Integer.parseInt(&amp;quot;ff&amp;quot;,16)           255
+
+  *)进制转换
+
+      Integer.toBinaryString(255)         &amp;quot;11111111&amp;quot;
+      Integer.toOctalString(255)          &amp;quot;377&amp;quot;
+      Integer.toHexString(255)            &amp;quot;ff&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;Double&quot;&gt;&lt;a href=&quot;#Double&quot; class=&quot;headerlink&quot; title=&quot;  Double&quot;&gt;&lt;/a&gt;  Double&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;创建对象
+--------------------------------------
+  1.Double d = new Double(3.14);
+
+  2.Double d = Double.valueOf(3.14);
+
+      与 new 相同
+
+方法
+--------------------------------------
+  *)从父类继承的6个取值方法
+  *)字符串解析成数字
+
+      Double.parseDouble(&amp;quot;3.14&amp;quot;)
+
+          Short.parseShort()
+          Long.parseLong()
+          Float.parseFloat()
+          Boolean.parseBoolean()
+          ...
+
+  *)对特殊值进行检查
+
+      Infinity      3.14/0
+      NaN           Math.sqrt(-2)
+
+
+      Double.isInfinite(double d)
+      Double.isNaN(double d)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;自动装箱、自动拆箱&quot;&gt;&lt;a href=&quot;#自动装箱、自动拆箱&quot; class=&quot;headerlink&quot; title=&quot;  自动装箱、自动拆箱&quot;&gt;&lt;/a&gt;  自动装箱、自动拆箱&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;自动装箱
+---------------------------
+  Integer a = 23;
+  编译成：Integer a = Integer.valueOf(23);
+
+自动拆箱
+---------------------------
+  int i = a;
+  编译成：int i = a.intValue();
+
+  a = a + 1;
+  编译成：a = Integer.valueOf(a.intValue() + 1);
+
+  *)自动拆箱要当心 null 值
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;java.math.BigDecimal&lt;/p&gt;
+&lt;h1 id=&quot;java-math-BigInteger&quot;&gt;&lt;a href=&quot;#java-math-BigInteger&quot; class=&quot;headerlink&quot; title=&quot;java.math.BigInteger&quot;&gt;&lt;/a&gt;java.math.BigInteger&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;BigDecimal 精确浮点数运算&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;BigInteger 大整数运算，可以超出 long 范围&lt;/p&gt;
+&lt;p&gt;创建对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;BigDecimal bd = BigDecimal.valueOf(2);
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;方法-2&quot;&gt;&lt;a href=&quot;#方法-2&quot; class=&quot;headerlink&quot; title=&quot;  方法&quot;&gt;&lt;/a&gt;  方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;add(BigDecimal bd)
+subtract(BigDecimal bd)
+multiply(BigDecimal bd)
+divide(BigDecimal bd)
+divide(BigDecimal bd, 保留位数, 舍入方式)
+
+舍入运算
+
+  setScale(保留位数, 舍入方式)
+    舍入运算结果，被封装成新的 BigDecimal 对象
+
+取值
+
+  *)从 Number 继承的6个取值方法
+  *)作为字符串取出
+
+      toString()
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;java-text-DecimalFormat&quot;&gt;&lt;a href=&quot;#java-text-DecimalFormat&quot; class=&quot;headerlink&quot; title=&quot;java.text.DecimalFormat&quot;&gt;&lt;/a&gt;java.text.DecimalFormat&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;数字格式工具&lt;/li&gt;
+&lt;li&gt;数字 –&amp;gt; 数字格式的字符串&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数字格式的字符串 –&amp;gt; 数字&lt;/p&gt;
+&lt;p&gt;  “￥32,563,735.900”&lt;/p&gt;
+&lt;p&gt;创建对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;DecimalFormat f = new DecimalFormat(格式);
+
+  格式: 参考 DecimalFormat 的 API 文档
+
+      &amp;quot;\u00A4###,###.000&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;方法-3&quot;&gt;&lt;a href=&quot;#方法-3&quot; class=&quot;headerlink&quot; title=&quot;  方法&quot;&gt;&lt;/a&gt;  方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;format(数字)
+     数字格式化成字符串
+
+parse(字符串)
+     字符串解析成数字
+     返回 Number 类型对象
+
+applyPattern(格式)
+     修改格式
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;java-lang-Math-1&quot;&gt;&lt;a href=&quot;#java-lang-Math-1&quot; class=&quot;headerlink&quot; title=&quot;java.lang.Math&quot;&gt;&lt;/a&gt;java.lang.Math&lt;/h1&gt;&lt;p&gt;  Math.PI&lt;br&gt;  Math.E&lt;br&gt;  Math.sqrt()&lt;br&gt;  Math.random()&lt;br&gt;  Math.pow()&lt;br&gt;  Math.max()&lt;br&gt;  Math.min()&lt;br&gt;  Math.sin()&lt;br&gt;  Math.cos()&lt;br&gt;  Math.tan()&lt;br&gt;  …&lt;/p&gt;
+&lt;h1 id=&quot;java-util-Date&quot;&gt;&lt;a href=&quot;#java-util-Date&quot; class=&quot;headerlink&quot; title=&quot;java.util.Date&quot;&gt;&lt;/a&gt;java.util.Date&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;封装一个毫秒值，表示一个时间点&lt;/p&gt;
+&lt;p&gt;  毫秒值: 1970-1-1 0点开始的毫秒值&lt;/p&gt;
+&lt;p&gt;创建对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;1. Date d = new Date();
+
+      封装系统当前时间毫秒值
+
+2. Date d = new Date(600000000000L);
+
+      封装指定的毫秒值
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;方法-4&quot;&gt;&lt;a href=&quot;#方法-4&quot; class=&quot;headerlink&quot; title=&quot;  方法&quot;&gt;&lt;/a&gt;  方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;getTime()
+setTime(long t)
+
+  存取内部毫秒值
+
+compareTo(Date d)
+
+  当前对象与参数对象d比较大小
+  当前对象大，正数
+  当前对象小，负数
+  大小相同，0
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;java-text-SimpleDateFormat&quot;&gt;&lt;a href=&quot;#java-text-SimpleDateFormat&quot; class=&quot;headerlink&quot; title=&quot;java.text.SimpleDateFormat&quot;&gt;&lt;/a&gt;java.text.SimpleDateFormat&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;日期格式工具&lt;/li&gt;
+&lt;li&gt;Date对象 –&amp;gt; 日期格式的字符串&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;日期格式的字符串 –&amp;gt; Date对象&lt;/p&gt;
+&lt;p&gt;创建对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;SimpleDateFormat f = new SimpleDateFormat(格式);
+
+  格式：参考 SimpleDateFormat 文档
+
+      &amp;quot;yyyy-MM-dd HH:mm:ss&amp;quot;
+      &amp;quot;dd/MM/yyyy&amp;quot;
+      &amp;quot;yy-M-d H:m&amp;quot;
+      &amp;quot;yyyy年MM月dd日&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;方法-5&quot;&gt;&lt;a href=&quot;#方法-5&quot; class=&quot;headerlink&quot; title=&quot;  方法&quot;&gt;&lt;/a&gt;  方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;format(Date对象)
+  Date对象格式化成字符串
+
+parse(字符串)
+  字符串解析成 Date 对象
+
+applyPattern(格式)
+  修改格式
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;java-util-Calendar&quot;&gt;&lt;a href=&quot;#java-util-Calendar&quot; class=&quot;headerlink&quot; title=&quot;java.util.Calendar&quot;&gt;&lt;/a&gt;java.util.Calendar&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;日历抽象父类&lt;/li&gt;
+&lt;li&gt;封装毫秒值表示一个时间点&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;提供一组时间运算处理方法&lt;/p&gt;
+&lt;p&gt;创建对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;1.Calendar c = new GregorianCalendar();
+
+2.Calendar c = Calendar.getInstance();
+
+      在某些地区，可能创建当地历法，
+      中国就是 GregorianCalendar
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;方法-6&quot;&gt;&lt;a href=&quot;#方法-6&quot; class=&quot;headerlink&quot; title=&quot;  方法&quot;&gt;&lt;/a&gt;  方法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;get(字段)
+
+              获得日期中指定字段的值，例如：
+
+              c.get(Calendar.YEAR)
+              c.get(Calendar.HOUR_OF_DAY)
+
+      set(字段, 值)
+
+              修改指定字段的值
+
+      set(int year, int month, int date, int hourOfDay, int minute, int second)  
+
+              设置年月日时分秒
+
+      add(int field, int amount) 
+
+              在指定字段上加一个值
+
+              c.add(Calendar.YEAR, 10)
+
+      compareTo(Calendar anotherCalendar) 
+
+              与另一个时间比较大小
+              当前Calendar实例大，返回正数
+              当前Calendar实例小，返回负数
+              相同大小，返回0
+
+      getActualMaximum(int field) 
+
+              获得指定字段实际最大值，
+              用来获得月中的最大天数
+
+      星期日 - 1
+      星期一 - 2
+      星期二 - 3
+      星期三 - 4
+      星期四 - 5
+      星期五 - 6
+      星期六 - 7
+
+
+
+      getTime() 
+
+              获得表示相同时间的 Date 类型实例
+
+      setTime(Date date) 
+
+              将时间设置为指定 Date 实例所表示的时间
+
+      getTimeInMillis() 
+      setTimeInMillis(long millis) 
+
+              毫秒值存取方法
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;java-util-GregorianCalendar-1&quot;&gt;&lt;a href=&quot;#java-util-GregorianCalendar-1&quot; class=&quot;headerlink&quot; title=&quot;java.util.GregorianCalendar&quot;&gt;&lt;/a&gt;java.util.GregorianCalendar&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;日历子类&lt;/li&gt;
+&lt;li&gt;罗马历，即“公历”或“阳历”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;练习&quot;&gt;&lt;a href=&quot;#练习&quot; class=&quot;headerlink&quot; title=&quot;练习&quot;&gt;&lt;/a&gt;练习&lt;/h1&gt;&lt;p&gt;  1.&lt;br&gt;    从 email 获取名字&lt;br&gt;        abc@def.com –&amp;gt; abc&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;是否是“回文”
+    正着念反着念都相同
+    abcdefedcba
+
+翻转字符串
+    abc --&amp;gt; cba
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2.&lt;br&gt;    获得字符串中的连续数字&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sdrg5647wqe4wer4786w4ertw83er76474w
+
+5647
+4786
+76474
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.&lt;br&gt;    填写生日&lt;br&gt;    显示“您已经生存了 xxx 天”&lt;/p&gt;
+&lt;h1 id=&quot;作业&quot;&gt;&lt;a href=&quot;#作业&quot; class=&quot;headerlink&quot; title=&quot;作业&quot;&gt;&lt;/a&gt;作业&lt;/h1&gt;&lt;p&gt;  1.&lt;br&gt;    day0905_变形金刚&lt;br&gt;      七遍疗法之第五遍&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Student 类
+  id,name,gender,age
+  重写 toString() 和 equals() 方法
+
+  提示: 基本类型 ==
+        字符串 equals()
+
+代码狂欢到 6:00 ：
+  day1301_坐标点
+  day1302_字符串
+  day1305_正则表达式
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2.&lt;br&gt;    day0905_变形金刚&lt;br&gt;      七遍疗法之第六遍&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;代码狂欢到 6:00 ：
+  day1402_正则表达式
+  day1404_大数字对象
+  day1405_Date
+  day1406_生存天数
+  day1407_Calendar
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;API&quot;&gt;&lt;a href=&quot;#API&quot; class=&quot;headerlink&quot; title=&quot;API&quot;&gt;&lt;/a&gt;API&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Application Programming Interface&lt;br&gt;应用编程接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li
+    
+    </summary>
+    
+    
+      <category term="-课堂笔记" scheme="https://github.com/Nevermore-Lee/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>corejava05</title>
+    <link href="https://github.com/Nevermore-Lee/2016/04/22/corejava05/"/>
+    <id>https://github.com/Nevermore-Lee/2016/04/22/corejava05/</id>
+    <published>2016-04-21T16:01:05.000Z</published>
+    <updated>2016-04-21T16:16:01.965Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;一组数据结构工具&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用来按特定结构来保存一组数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;java.util 包&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;Collection 接口
+  |- List 接口
+      |- ArrayList
+      |- LinkedList
+  |- Set 接口
+      |- HashSet
+      |- TreeSet
+
+Map 接口
+  |- HashMap
+  |- TreeMap
+
+Iterator 接口
+Collections 集合工具类
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;LinkedList&quot;&gt;&lt;a href=&quot;#LinkedList&quot; class=&quot;headerlink&quot; title=&quot;LinkedList&quot;&gt;&lt;/a&gt;LinkedList&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;双向链表&lt;/li&gt;
+&lt;li&gt;两端效率高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;创建对象&quot;&gt;&lt;a href=&quot;#创建对象&quot; class=&quot;headerlink&quot; title=&quot;创建对象&quot;&gt;&lt;/a&gt;创建对象&lt;/h3&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;LinkedList list = new LinkedList();
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h3&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;add(数据)                              添加数据
+    add(int index, 数据)        在指定位置插入数据
+    addFirst(数据)    
+    addLast(数据)
+    getFirst()
+    getLast()
+    removeFirst()
+    removeLast()        
+    FIFO 操作 First In First Out，队列操作 Queue
+            offer(数据)        - addLast
+            peek()                - getFirst
+            poll()                - removeFist        
+    LIFO 操作 Last In Fisrt Out，栈操作 Stack
+            push()                - addFirst
+            pop()                    - removeFist
+    get(int index)        - 获得指定位置的值
+    contains(数据)            - 判断列表中是否存在与指定数据相等(equals)的值
+    set(int index, 数据)            - 将指定位置设置为新的值
+    size()                        - 获得列表中数据的数量
+    remove(int index)    - 移除指定位置的元素，并返回被移除的数据
+    remove(数据)                - 移除与指定数据相等的数据
+    clear()                        - 清空
+    iterator()                - 获得新建的迭代器实例
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;ArrayList&quot;&gt;&lt;a href=&quot;#ArrayList&quot; class=&quot;headerlink&quot; title=&quot;ArrayList&quot;&gt;&lt;/a&gt;ArrayList&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;内部用数组存放数据&lt;/li&gt;
+&lt;li&gt;访问任意位置效率高&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加或删除数据，效率可能降低&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ArrayList  vs  LinkedList&lt;/p&gt;
+&lt;p&gt;  *)只在两端操作数据，使用 LinkedList&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;创建对象-1&quot;&gt;&lt;a href=&quot;#创建对象-1&quot; class=&quot;headerlink&quot; title=&quot;创建对象&quot;&gt;&lt;/a&gt;创建对象&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;1.ArrayList list = new ArrayList();
+
+    内部数组初始容量 10
+
+2.ArrayList list = new ArrayList(100);
+
+    内部数组初始容量 100
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;方法-1&quot;&gt;&lt;a href=&quot;#方法-1&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;与 LinkedList 相同，
+但没有两端操作数据的方法
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;HashMap&quot;&gt;&lt;a href=&quot;#HashMap&quot; class=&quot;headerlink&quot; title=&quot;HashMap&quot;&gt;&lt;/a&gt;HashMap&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;哈希表，散列表&lt;/li&gt;
+&lt;li&gt;存放“键值对”数据&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用来快速查找数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;键：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不重复&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;无序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;必须重写 hashCode() 和 equals()&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;equals()相等，hashCode() 必须相等&lt;/li&gt;
+&lt;li&gt;equals()不相等，hashCode() 尽量不相等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;创建对象-2&quot;&gt;&lt;a href=&quot;#创建对象-2&quot; class=&quot;headerlink&quot; title=&quot;创建对象&quot;&gt;&lt;/a&gt;创建对象&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;HashMap map = new HashMap();
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;方法-2&quot;&gt;&lt;a href=&quot;#方法-2&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;put(k, v)   放入键值对数据
+get(k)      用键获得对应的值
+remove(k)   移除指定的键和它的值
+    containsKey(key)        是否包含指定的键
+    containsValue(value)是否包含指定的值
+    size()                            有多少对数据
+    clear()                            清空
+
+    keySet()                        获得一个 Set 类型集合，包含所有的键
+    entrySet()                    获得一个 Set 类型结合，包含所有 Entry
+    values()                        获得集合，包含所有的值
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;哈希算法&quot;&gt;&lt;a href=&quot;#哈希算法&quot; class=&quot;headerlink&quot; title=&quot;哈希算法&quot;&gt;&lt;/a&gt;哈希算法&lt;/h3&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;放入数据
+------------------------------
+  1. key.hasCode() 获得键的哈希值
+  2. 用哈希值计算下标值 i
+  3. 达到一定负载率，数组容量翻倍
+  4. 创建 Entry 对象封装键和值
+  5. 放入 i 位置
+      6.i位置是空位置，直接放入
+      7.i位置有数据，
+          8.依次用 equals() 比较每个键是否相等
+              9.找到相等的，覆盖值
+          10.没有找到相等的
+             链表连在一起
+
+获取数据
+-------------------------------------
+  1. key.hasCode() 获得键的哈希值
+  2. 用哈希值计算下标值 i
+  3. 依次用 equals() 比较每个键是否相等
+       4.找到相等的，返回对应的值
+  5. 找不到相等的，返回 null
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;TreeMap&quot;&gt;&lt;a href=&quot;#TreeMap&quot; class=&quot;headerlink&quot; title=&quot;TreeMap&quot;&gt;&lt;/a&gt;TreeMap&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;红黑树&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;快速查找数据的算法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;键&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不重复&lt;/li&gt;
+&lt;li&gt;有序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;创建对象-3&quot;&gt;&lt;a href=&quot;#创建对象-3&quot; class=&quot;headerlink&quot; title=&quot;创建对象&quot;&gt;&lt;/a&gt;创建对象&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;1.TreeMap map = new TreeMap();
+
+2.TreeMap map = new TreeMap(比较器);
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;方法-3&quot;&gt;&lt;a href=&quot;#方法-3&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;与 HashMap 相同
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;练习&quot;&gt;&lt;a href=&quot;#练习&quot; class=&quot;headerlink&quot; title=&quot;练习&quot;&gt;&lt;/a&gt;练习&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;第 n 个丑数&lt;/p&gt;
+&lt;p&gt;3 5 7 9 15 21 25 27 …&lt;/p&gt;
+&lt;p&gt;i = 8341&lt;br&gt;j = i&lt;/p&gt;
+&lt;p&gt;j/3/3/3/5/5/7/7/7&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;  2.&lt;br&gt;    计算器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;5434.64 + 2 - 0.3256 * 6345 / 5
+
+5434.64
++
+2
+-
+0.3256
+*
+6345
+/
+5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  3.&lt;br&gt;    爱好选择&lt;/p&gt;
+&lt;p&gt;  4.&lt;br&gt;    字符串中的字符统计&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;abcabcdabce
+      i
+
+k     v
+---   ----
+a     2
+b     2
+c     2
+d     1
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;作业&quot;&gt;&lt;a href=&quot;#作业&quot; class=&quot;headerlink&quot; title=&quot;作业&quot;&gt;&lt;/a&gt;作业&lt;/h1&gt;&lt;p&gt;  1.&lt;br&gt;    浏览笔记&lt;br&gt;        corejava_04.txt&lt;br&gt;        corejava_05.txt&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;代码狂欢到 6:00
+  day1501_LinkedList
+  day1502_丑数
+  day1503_计算器
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  2.&lt;br&gt;    浏览笔记&lt;br&gt;        corejava_04.txt&lt;br&gt;        corejava_05.txt&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;day1503_计算器
+    MainActivity.java
+    Formula.java
+
+      修改 jiSuan() 方法
+      使用 BigDecimal 做精确运算
+
+代码狂欢到 6:00 
+    day1503_计算器
+    day1601_ArrayList
+    day1602_爱好选择
+    day1603_HashMap  
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;集合&quot;&gt;&lt;a href=&quot;#集合&quot; class=&quot;headerlink&quot; title=&quot;集合&quot;&gt;&lt;/a&gt;集合&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;一组数据结构工具&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;用来按特定结构来保存一组数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;java.util 包
+    
+    </summary>
+    
+    
+      <category term="-课堂笔记" scheme="https://github.com/Nevermore-Lee/tags/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
